@@ -1,0 +1,38 @@
+{
+  "name": "eslint-config-tamia",
+  "version": "1.0.0",
+  "description": "Tâmia’s ESLint config",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "mocha": "mocha ./test",
+    "test": "npm run mocha && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tamiadev/eslint-config-tamia"
+  },
+  "keywords": [
+    "eslintconfig",
+    "tamia"
+  ],
+  "author": {
+    "name": "Artem Sapegin",
+    "url": "http://sapegin.me/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tamiadev/eslint-config-tamia/issues"
+  },
+  "homepage": "https://github.com/tamiadev/eslint-config-tamia",
+  "devDependencies": {
+    "chai": "~3.4.1",
+    "eslint": "~1.10.3",
+    "eslint-plugin-react": "~3.15.0",
+    "mocha": "~2.3.4",
+    "react": "~0.14.6"
+  },
+  "peerDependencies": {
+    "eslint": ">=1.10.0"
+  }
+}
