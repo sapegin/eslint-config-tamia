@@ -24,6 +24,6 @@ module.exports = {
 			args: 'after-used',
 		}],
 		// Disallow use of variables before they are defined
-		'no-use-before-define': 2,
+		'no-use-before-define': 0,
 	},
 };
