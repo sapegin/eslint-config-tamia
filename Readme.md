@@ -10,7 +10,7 @@ We export three ESLint configurations for your usage.
 
 Our default export contains all of our ESLint rules, including EcmaScript 6+. It requires `eslint`.
 
-`npm install --save-dev eslint-config-tamia eslint`
+`npm install --save-dev eslint-config-tamia eslint babel-eslint`
 
 `.eslintrc`:
 
@@ -24,7 +24,7 @@ Our default export contains all of our ESLint rules, including EcmaScript 6+. It
 
 Lints ES6+ but and React. Requires `eslint` and `eslint-plugin-react`.
 
-`npm install --save-dev eslint-config-tamia eslint-plugin-react eslint`
+`npm install --save-dev eslint-config-tamia eslint-plugin-react eslint babel-eslint`
 
 `.eslintrc`:
 
