@@ -29,11 +29,15 @@ module.exports = {
 		'react/jsx-curly-spacing': [0, 'never', {
 			allowMultiline: true,
 		}],
+		// Disallow spaces around equal signs in JSX attributes
+		'react/jsx-equals-spacing': [2, 'never'],
 		// Enforce event handler naming conventions in JSX
 		'react/jsx-handler-names': [2, {
 			eventHandlerPrefix: 'handle',
 			eventHandlerPropPrefix: 'on',
 		}],
+		// Validate JSX indentation
+		'react/jsx-indent': [2, 'tab'],
 		// Validate props indentation in JSX
 		'react/jsx-indent-props': [2, 'tab'],
 		// Validate JSX has key prop when in array or iterator
@@ -50,6 +54,8 @@ module.exports = {
 		}],
 		// Prevent usage of unwrapped JSX strings
 		'react/jsx-no-literals': 0,
+		// Prevent usage of unsafe target='_blank'
+		'react/jsx-no-target-blank': 2,
 		// Disallow undeclared variables in JSX
 		'react/jsx-no-undef': 2,
 		// Enforce PascalCase for user-defined JSX components
@@ -58,6 +64,8 @@ module.exports = {
 		'react/jsx-sort-prop-types': 0,
 		// Enforce props alphabetical sorting
 		'react/jsx-sort-props': 0,
+		// Validate spacing before closing bracket in JSX
+		'react/jsx-space-before-closing': [2, 'always'],
 		// Prevent React to be incorrectly marked as unused
 		'react/jsx-uses-react': [2, {
 			pragma: 'React',
@@ -90,6 +98,8 @@ module.exports = {
 		'react/no-unknown-property': 2,
 		// Require ES6 class declarations over React.createClass
 		'react/prefer-es6-class': [2, 'always'],
+		// Enforce stateless React Components to be written as a pure function
+		'react/prefer-stateless-function': 2,
 		// Prevent missing props validation in a React component definition
 		'react/prop-types': [2, {
 			ignore: [],
