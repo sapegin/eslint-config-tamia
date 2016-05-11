@@ -16,9 +16,7 @@ module.exports = {
 	// https://github.com/yannickcr/eslint-plugin-react#list-of-supported-rules
 	rules: {
 		// Prevent missing displayName in a React component definition
-		'react/display-name': [0, {
-			acceptTranspilerName: false,
-		}],
+		'react/display-name': 0,
 		// Forbid certain propTypes (any, array, object)
 		'react/forbid-prop-types': 0,
 		// Enforce boolean attributes notation in JSX
