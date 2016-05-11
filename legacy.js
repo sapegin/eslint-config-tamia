@@ -12,9 +12,7 @@ module.exports = {
 		node: true,
 		amd: false,
 		mocha: true,
-		jasmine: false,
 	},
-	ecmaFeatures: {},
 	globals: {},
 	rules: {},
 };
