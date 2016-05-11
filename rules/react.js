@@ -2,8 +2,15 @@ module.exports = {
 	plugins: [
 		'react',
 	],
-	ecmaFeatures: {
-		jsx: true,
+	parserOptions: {
+		ecmaFeatures: {
+			jsx: true,
+		},
+	},
+	settings: {
+		react: {
+			version: '15.0',
+		},
 	},
 	// View link below for react rules documentation
 	// https://github.com/yannickcr/eslint-plugin-react#list-of-supported-rules
