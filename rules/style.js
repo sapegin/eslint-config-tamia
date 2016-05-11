@@ -35,6 +35,11 @@ module.exports = {
 		}],
 		// Specify whether double or single quotes should be used in JSX attributes
 		'jsx-quotes': [2, 'prefer-double'],
+		// Enforces consistent spacing before and after keywords
+		'keyword-spacing': [2, {
+			before: true,
+			after: true,
+		}],
 		// Enforces spacing between keys and values in object literal properties
 		'key-spacing': [2, {
 			beforeColon: false,
@@ -119,10 +124,6 @@ module.exports = {
 		'semi': [2, 'always'],
 		// sort variables within the same declaration block
 		'sort-vars': 0,
-		// Require a space before certain keywords
-		'space-before-keywords': [2, 'always'],
-		// Require a space after certain keywords
-		'space-after-keywords': [2, 'always'],
 		// Require or disallow space before blocks
 		'space-before-blocks': 2,
 		// Require or disallow space before function opening parenthesis
@@ -134,8 +135,6 @@ module.exports = {
 		'space-in-parens': [2, 'never'],
 		// Require spaces around operators
 		'space-infix-ops': 2,
-		// Require a space after return, throw, and case
-		'space-return-throw-case': 2,
 		// Require or disallow spaces before/after unary operators
 		'space-unary-ops': [2, {
 			words: true,

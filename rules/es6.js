@@ -1,25 +1,13 @@
 module.exports = {
 	env: {
-		es6: false,
+		es6: true,
 	},
-	ecmaFeatures: {
-		arrowFunctions: true,
-		blockBindings: true,
-		classes: true,
-		defaultParams: true,
-		destructuring: true,
-		forOf: true,
-		generators: false,
-		modules: true,
-		objectLiteralComputedProperties: true,
-		objectLiteralDuplicateProperties: false,
-		objectLiteralShorthandMethods: true,
-		objectLiteralShorthandProperties: true,
-		restParams: true,
-		spread: true,
-		superInFunctions: true,
-		templateStrings: true,
-		jsx: true,
+	parserOptions: {
+		ecmaVersion: 7,
+		sourceType: 'module',
+		ecmaFeatures: {
+			jsx: true,
+		},
 	},
 	rules: {
 		// Require parens in arrow function arguments

@@ -26,14 +26,14 @@
   },
   "homepage": "https://github.com/tamiadev/eslint-config-tamia",
   "devDependencies": {
-    "babel-eslint": "~5.0.0",
-    "chai": "~3.4.1",
-    "eslint": "~1.10.3",
-    "eslint-plugin-react": "~3.15.0",
-    "mocha": "~2.3.4",
-    "react": "~0.14.6"
+    "babel-eslint": "~6.0.4",
+    "chai": "~3.5.0",
+    "eslint": "~2.9.0",
+    "eslint-plugin-react": "~5.1.1",
+    "mocha": "~2.4.5",
+    "react": "~15.0.2"
   },
   "peerDependencies": {
-    "eslint": ">=1.10.0"
+    "eslint": ">=2.9.0"
   }
 }
