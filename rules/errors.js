@@ -44,10 +44,16 @@ module.exports = {
 		'no-obj-calls': 2,
 		// Disallow multiple spaces in a regular expression literal
 		'no-regex-spaces': 2,
+		// Disallow self assignment
+		'no-self-assign': 2,
 		// Disallow sparse arrays
 		'no-sparse-arrays': 2,
 		// Disallow unreachable statements after a return, throw, continue, or break statement
 		'no-unreachable': 2,
+		// Disallow unmodified conditions of loops
+		'no-unmodified-loop-condition': 2,
+		// Disallow control flow statements in finally blocks
+		'no-unsafe-finally': 2,
 		// Disallow comparisons with the value NaN
 		'use-isnan': 2,
 		// Ensure JSDoc comments are valid

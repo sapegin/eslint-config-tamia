@@ -29,6 +29,8 @@ module.exports = {
 		'func-style': 0,
 		// This option enforces minimum and maximum identifier lengths (variable names, property names etc.)
 		'id-length': 0,
+		// Disallow specified identifiers
+		'id-blacklist': [1, 'i', 'j', 'l', 'k', 'v', 'e'],
 		// This option sets a specific tab width for your code
 		'indent': [2, 'tab', {
 			SwitchCase: 1,
@@ -56,10 +58,18 @@ module.exports = {
 		}],
 		// Specify the maximum depth callbacks can be nested
 		'max-nested-callbacks': 0,
+		// Specify the maximum number of statements allowed per line
+		'max-statements-per-line': [1, {
+			max: 1,
+		}],
 		// Require a capital letter for constructors
 		'new-cap': [2, {
 			newIsCap: true,
 			capIsNew: false,
+		}],
+		// Newline per chained method call
+		'newline-per-chained-call': [2, {
+			ignoreChainWithDepth: 2,
 		}],
 		// Disallow the omission of parentheses when invoking a constructor with no arguments
 		'new-parens': 2,
@@ -94,6 +104,8 @@ module.exports = {
 		'no-underscore-dangle': 0,
 		// Disallow the use of Boolean literals in conditional expressions
 		'no-unneeded-ternary': 2,
+		// Disallow whitespace before properties
+		'no-whitespace-before-property': 2,
 		// Require padding inside curly braces
 		'object-curly-spacing': [2, 'always'],
 		// Allow just one var statement per function

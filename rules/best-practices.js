@@ -105,6 +105,8 @@ module.exports = {
 		'no-unused-expressions': 2,
 		// Disallow unnecessary .call() and .apply()
 		'no-useless-call': 0,
+		// Disallow unnecessary escape usage
+		'no-useless-escape': 1,
 		// Disallow use of void operator
 		'no-void': 2,
 		// Disallow usage of configurable warning terms in comments: e.g. todo
