@@ -156,5 +156,7 @@ module.exports = {
 		'spaced-comment': [2, 'always'],
 		// Require regex literals to be wrapped in parentheses
 		'wrap-regex': 0,
+		// Enforce placing object properties on separate lines
+		'object-property-newline': 2,
 	},
 };

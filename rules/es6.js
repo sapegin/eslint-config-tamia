@@ -53,5 +53,9 @@ module.exports = {
 		'require-yield': 0,
 		// Enforce usage of spacing in template strings
 		'template-curly-spacing': [2, 'never'],
+		// Disallow renaming import, export, and destructured assignments to the same name
+		'no-useless-rename': 2,
+		// Enforce spacing between rest and spread operators and their expressions
+		'rest-spread-spacing': [2, 'never'],
 	},
 };

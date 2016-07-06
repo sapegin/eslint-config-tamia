@@ -123,5 +123,7 @@ module.exports = {
 		'yoda': [2, 'never', {
 			exceptRange: true,
 		}],
+		// Disallow mixes of different operators
+		'no-mixed-operators': 2,
 	},
 };

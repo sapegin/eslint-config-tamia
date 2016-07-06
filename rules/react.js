@@ -108,7 +108,10 @@ module.exports = {
 		// Restrict file extensions that may be required
 		'react/require-extension': 0,
 		// Prevent extra closing tags for components without children
-		'react/self-closing-comp': 2,
+		'react/self-closing-comp': [2, {
+			component: true,
+			html: false,
+		}],
 		// Enforce component methods order
 		'react/sort-comp': [2, {
 			order: [
@@ -126,5 +129,13 @@ module.exports = {
 			assignment: true,
 			return: true,
 		}],
+		// Restrict file extensions that may contain JSX
+		'react/jsx-filename-extension': [2, {
+			extensions: ['.js'],
+		}],
+		// Prevent usage of the return value of React.render
+		'react/no-render-return-value': 2,
+		// Prevent comments from being inserted as text nodes
+		'react/no-comment-textnodes': 2,
 	},
 };
