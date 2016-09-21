@@ -113,7 +113,7 @@ module.exports = {
 			],
 		}],
 		// Prevent missing parentheses around multilines JSX
-		'react/wrap-multilines': [2, {
+		'react/jsx-wrap-multilines': [2, {
 			declaration: true,
 			assignment: true,
 			return: true,
@@ -125,7 +125,7 @@ module.exports = {
 		// Prevent usage of the return value of React.render
 		'react/no-render-return-value': 2,
 		// Prevent comments from being inserted as text nodes
-		'react/no-comment-textnodes': 2,
+		'react/jsx-no-comment-textnodes': 2,
 		// Prevent usage of findDOMNode
 		'react/no-find-dom-node': 2,
 		// Prevent problem with children and props.dangerouslySetInnerHTML
