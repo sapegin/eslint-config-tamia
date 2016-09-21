@@ -157,6 +157,6 @@ module.exports = {
 		// Require regex literals to be wrapped in parentheses
 		'wrap-regex': 0,
 		// Enforce placing object properties on separate lines
-		'object-property-newline': 2,
+		'object-property-newline': 0,
 	},
 };
