@@ -23,6 +23,8 @@ module.exports = {
 		'consistent-this': 0,
 		// Enforce newline at the end of file, with no multiple empty lines
 		'eol-last': 2,
+		// Require or disallow spacing between function identifiers and their invocations
+		'func-call-spacing': [2, 'never'],
 		// Require function expressions to have a name
 		'func-names': 0,
 		// Enforces use of function declarations or expressions
@@ -94,8 +96,6 @@ module.exports = {
 		'no-nested-ternary': 2,
 		// Disallow use of the Object constructor
 		'no-new-object': 2,
-		// Disallow space between function identifier and application
-		'no-spaced-func': 2,
 		// Disallow the use of ternary operators
 		'no-ternary': 0,
 		// Disallow trailing whitespace at the end of lines

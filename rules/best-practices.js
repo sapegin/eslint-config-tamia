@@ -71,8 +71,8 @@ module.exports = {
 		}],
 		// Disallow use of multiline strings
 		'no-multi-str': 2,
-		// Disallow reassignments of native objects
-		'no-native-reassign': 2,
+		// Disallow assignment to native objects or read-only global variables
+		'no-global-assign': 2,
 		// Disallow use of new operator when not part of the assignment or comparison
 		'no-new': 0,
 		// Disallow use of new operator for Function object

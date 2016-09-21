@@ -7,11 +7,6 @@ module.exports = {
 			jsx: true,
 		},
 	},
-	settings: {
-		react: {
-			version: '15.0',
-		},
-	},
 	// View link below for react rules documentation
 	// https://github.com/yannickcr/eslint-plugin-react#list-of-supported-rules
 	rules: {
@@ -65,17 +60,13 @@ module.exports = {
 		// Validate spacing before closing bracket in JSX
 		'react/jsx-space-before-closing': [2, 'always'],
 		// Prevent React to be incorrectly marked as unused
-		'react/jsx-uses-react': [2, {
-			pragma: 'React',
-		}],
+		'react/jsx-uses-react': 2,
 		// Prevent variables used in JSX to be incorrectly marked as unused
 		'react/jsx-uses-vars': 2,
 		// Prevent usage of dangerous JSX properties
 		'react/no-danger': 0,
 		// Prevent usage of deprecated methods
-		'react/no-deprecated': [1, {
-			react: '0.14.0',
-		}],
+		'react/no-deprecated': 2,
 		// Prevent usage of setState in componentDidMount
 		'react/no-did-mount-set-state': [2, 'allow-in-func'],
 		// Prevent usage of setState in componentDidUpdate
@@ -105,8 +96,6 @@ module.exports = {
 		}],
 		// Prevent missing React when using JSX
 		'react/react-in-jsx-scope': 2,
-		// Restrict file extensions that may be required
-		'react/require-extension': 0,
 		// Prevent extra closing tags for components without children
 		'react/self-closing-comp': [2, {
 			component: true,
@@ -137,5 +126,13 @@ module.exports = {
 		'react/no-render-return-value': 2,
 		// Prevent comments from being inserted as text nodes
 		'react/no-comment-textnodes': 2,
+		// Prevent usage of findDOMNode
+		'react/no-find-dom-node': 2,
+		// Prevent problem with children and props.dangerouslySetInnerHTML
+		'react/no-danger-with-children': 2,
+		// Prevent passing of children as props
+		'react/no-children-prop': 2,
+		// Prevent invalid characters from appearing in markup
+		'react/no-unescaped-entities': 2,
 	},
 };

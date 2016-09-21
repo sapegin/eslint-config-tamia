@@ -38,8 +38,8 @@ module.exports = {
 		'no-invalid-regexp': 2,
 		// Disallow irregular whitespace outside of strings and comments
 		'no-irregular-whitespace': 2,
-		// Disallow negation of the left operand of an in expression
-		'no-negated-in-lhs': 2,
+		// Disallow negating the left operand of relational operators
+		'no-unsafe-negation': 2,
 		// Disallow the use of object properties of the global object (Math and JSON) as functions
 		'no-obj-calls': 2,
 		// Disallow multiple spaces in a regular expression literal
