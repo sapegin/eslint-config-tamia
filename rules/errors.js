@@ -5,13 +5,13 @@ module.exports = {
 		// Disallow assignment in conditional expressions
 		'no-cond-assign': [2, 'always'],
 		// Disallow use of console
-		'no-console': 1,
+		'no-console': 2,
 		// Disallow use of constant expressions in conditions
-		'no-constant-condition': 1,
+		'no-constant-condition': 2,
 		// Disallow control characters in regular expressions
 		'no-control-regex': 2,
 		// Disallow use of debugger
-		'no-debugger': 1,
+		'no-debugger': 2,
 		// Disallow duplicate arguments in functions
 		'no-dupe-args': 2,
 		// Disallow duplicate keys when creating object literals
@@ -57,7 +57,7 @@ module.exports = {
 		// Disallow comparisons with the value NaN
 		'use-isnan': 2,
 		// Ensure JSDoc comments are valid
-		'valid-jsdoc': [1, {
+		'valid-jsdoc': [2, {
 			requireParamDescription: false,
 			requireReturnDescription: false,
 			requireReturn: false,

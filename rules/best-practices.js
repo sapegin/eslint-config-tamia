@@ -23,7 +23,7 @@ module.exports = {
 		// Make sure for-in loops have an if statement
 		'guard-for-in': 0,
 		// Disallow the use of alert, confirm, and prompt
-		'no-alert': 1,
+		'no-alert': 2,
 		// Disallow use of arguments.caller or arguments.callee
 		'no-caller': 2,
 		// Disallow division operators explicitly at beginning of regular expression
@@ -51,7 +51,7 @@ module.exports = {
 		// Disallow use of eval()-like methods
 		'no-implied-eval': 2,
 		// Disallow this keywords outside of classes or class-like objects
-		'no-invalid-this': 1,
+		'no-invalid-this': 2,
 		// Disallow usage of __iterator__ property
 		'no-iterator': 2,
 		// Disallow use of labels for anything other then loops and switches
@@ -64,7 +64,7 @@ module.exports = {
 		// Disallow creation of functions within loops
 		'no-loop-func': 2,
 		// Disallow use of multiple spaces
-		'no-multi-spaces': [1, {
+		'no-multi-spaces': [2, {
 			exceptions: {
 				Property: false,
 			},
@@ -106,13 +106,13 @@ module.exports = {
 		// Disallow unnecessary .call() and .apply()
 		'no-useless-call': 0,
 		// Disallow unnecessary escape usage
-		'no-useless-escape': 1,
+		'no-useless-escape': 2,
 		// Disallow use of void operator
 		'no-void': 2,
 		// Disallow usage of configurable warning terms in comments: e.g. todo
 		'no-warning-comments': 0,
 		// Disallow use of the with statement
-		'no-with': 1,
+		'no-with': 2,
 		// Require use of the second argument for parseInt()
 		'radix': 2,
 		// Requires to declare all vars on top of their containing scope

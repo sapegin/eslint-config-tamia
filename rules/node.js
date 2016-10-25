@@ -12,7 +12,7 @@ module.exports = {
 		// Disallow use of new operator with the require function
 		'no-new-require': 0,
 		// Disallow string concatenation with __dirname and __filename
-		'no-path-concat': 1,
+		'no-path-concat': 2,
 		// Disallow process.exit()
 		'no-process-exit': 0,
 		// Restrict usage of specified node modules
