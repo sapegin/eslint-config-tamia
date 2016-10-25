@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-tamia",
-  "version": "3.1.1",
+  "version": "3.2.0",
   "description": "Tâmia’s ESLint config",
   "main": "index.js",
   "scripts": {
