@@ -1,5 +1,7 @@
 # eslint-config-tamia
 
+[![Build Status](https://travis-ci.org/tamiadev/eslint-config-tamia.svg)](https://travis-ci.org/tamiadev/eslint-config-tamia)
+
 This package provides [Tâmia’s](http://tamiadev.github.io/tamia/) `.eslintrc` as an extensible shared config. Based on [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb).
 
 ## Usage
