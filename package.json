@@ -1,12 +1,12 @@
 {
   "name": "eslint-config-tamia",
-  "version": "3.2.0",
   "description": "Tâmia’s ESLint config",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
     "mocha": "mocha ./test",
-    "test": "npm run mocha && npm run lint"
+    "test": "npm run mocha && npm run lint",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
@@ -31,9 +31,15 @@
     "eslint": "~3.8.1",
     "eslint-plugin-react": "~6.4.1",
     "mocha": "~3.1.2",
-    "react": "~15.3.2"
+    "react": "~15.3.2",
+    "semantic-release": "~4.3.5"
   },
   "peerDependencies": {
     "eslint": ">=3.0.0"
+  },
+  "release": {
+    "analyzeCommits": "semantic-release-tamia/analyzeCommits",
+    "generateNotes": "semantic-release-tamia/generateNotes",
+    "verifyRelease": "semantic-release-tamia/verifyRelease"
   }
 }
