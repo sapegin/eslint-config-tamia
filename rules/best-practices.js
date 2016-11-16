@@ -5,11 +5,11 @@ module.exports = {
 		// Treat var statements as if they were block scoped
 		'block-scoped-var': 2,
 		// Specify the maximum cyclomatic complexity allowed in a program
-		'complexity': [0, 11],
+		complexity: [0, 11],
 		// Require return statements to either always or never specify values
 		'consistent-return': 2,
 		// Require curly braces for all control statements
-		'curly': [2, 'all'],
+		curly: [2, 'all'],
 		// Require default case in switch statements
 		'default-case': 2,
 		// Encourages use of dot notation whenever possible
@@ -19,7 +19,7 @@ module.exports = {
 		// Enforces consistent newlines before or after dots
 		'dot-location': 0,
 		// Require the use of === and !==
-		'eqeqeq': [2, 'allow-null'],
+		eqeqeq: [2, 'allow-null'],
 		// Make sure for-in loops have an if statement
 		'guard-for-in': 0,
 		// Disallow the use of alert, confirm, and prompt
@@ -107,6 +107,8 @@ module.exports = {
 		'no-useless-call': 0,
 		// Disallow unnecessary escape usage
 		'no-useless-escape': 2,
+		// Disallow redundant return statements
+		'no-useless-return': 2,
 		// Disallow use of void operator
 		'no-void': 2,
 		// Disallow usage of configurable warning terms in comments: e.g. todo
@@ -114,13 +116,13 @@ module.exports = {
 		// Disallow use of the with statement
 		'no-with': 2,
 		// Require use of the second argument for parseInt()
-		'radix': 2,
+		radix: 2,
 		// Requires to declare all vars on top of their containing scope
 		'vars-on-top': 0,
 		// Require immediate function invocation to be wrapped in parentheses
 		'wrap-iife': [2, 'outside'],
 		// Require or disallow Yoda conditions
-		'yoda': [2, 'never', {
+		yoda: [2, 'never', {
 			exceptRange: true,
 		}],
 		// Disallow mixes of different operators

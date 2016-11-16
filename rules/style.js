@@ -7,7 +7,7 @@ module.exports = {
 			allowSingleLine: false,
 		}],
 		// Require camel case names
-		'camelcase': [2, {
+		camelcase: [2, {
 			properties: 'never',
 		}],
 		// Enforce spacing before and after comma
@@ -34,7 +34,7 @@ module.exports = {
 		// Disallow specified identifiers
 		'id-blacklist': [1, 'i', 'j', 'l', 'k', 'v', 'e'],
 		// This option sets a specific tab width for your code
-		'indent': [2, 'tab', {
+		indent: [2, 'tab', {
 			SwitchCase: 1,
 		}],
 		// Specify whether double or single quotes should be used in JSX attributes
@@ -124,7 +124,7 @@ module.exports = {
 		// Require quotes around object literal property names
 		'quote-props': [2, 'as-needed'],
 		// specify whether double or single quotes should be used
-		'quotes': [2, 'single', 'avoid-escape'],
+		quotes: [2, 'single', 'avoid-escape'],
 		// Require identifiers to match the provided regular expression
 		'id-match': 0,
 		// Enforce spacing before and after semicolons
@@ -133,7 +133,7 @@ module.exports = {
 			after: true,
 		}],
 		// Require or disallow use of semicolons instead of ASI
-		'semi': [2, 'always'],
+		semi: [2, 'always'],
 		// sort variables within the same declaration block
 		'sort-vars': 0,
 		// Require or disallow space before blocks

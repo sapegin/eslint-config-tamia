@@ -134,5 +134,13 @@ module.exports = {
 		'react/no-children-prop': 2,
 		// Prevent invalid characters from appearing in markup
 		'react/no-unescaped-entities': 2,
+		// Configure the position of the first property
+		'react/jsx-first-prop-new-line': [2, 'multiline-multiprop'],
+		// Validate whitespace in and around the JSX opening and closing brackets
+		'react/jsx-tag-spacing': [2, {
+			closingSlash: 'never',
+			beforeSelfClosing: 'always',
+			afterOpening: 'never',
+		}],
 	},
 };
