@@ -122,7 +122,7 @@ module.exports = {
 		// Enforce padding within blocks
 		'padded-blocks': [2, 'never'],
 		// Require quotes around object literal property names
-		'quote-props': [2, 'consistent-as-needed'],
+		'quote-props': [2, 'as-needed'],
 		// specify whether double or single quotes should be used
 		'quotes': [2, 'single', 'avoid-escape'],
 		// Require identifiers to match the provided regular expression
