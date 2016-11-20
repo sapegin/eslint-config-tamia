@@ -50,4 +50,39 @@ Lints ES5 and below. Only requires `eslint`.
 }
 ```
 
-See [Tâmia’s Javascript styleguide](https://github.com/tamiadev/styleguides/blob/master/JavaScript.md) and the [ESlint config docs](http://eslint.org/docs/user-guide/configuring#extending-configuration-files) for more information.
+## Code style at a glance
+
+- Tab indentation.
+- Single-quotes.
+- Semicolons.
+- Declare variables just before their first usage.
+- Multiple variable statements.
+- Make `const`, not `var`.
+- Use `===` and `!==` over `==` and `!=`.
+- Return early.
+- Limit line lengths to 120 chars.
+- Prefer readability over religion.
+- Use ES6.
+
+Example:
+
+```javascript
+function eatFood(food) {
+    if (!food.length) {
+    	return ['No food'];
+    }
+
+    return food.map(dish => `No ${dish.toLowerCase()}`);
+}
+
+const food = [
+  'Pizza',
+  'Buger',
+  'Coffee',
+];
+console.log(eatFood(food));
+```
+
+---
+
+See [ESlint config docs](http://eslint.org/docs/user-guide/configuring#extending-configuration-files) for more information.
