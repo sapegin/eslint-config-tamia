@@ -5,6 +5,5 @@ module.exports = {
 		'eslint-config-tamia/rules/strict',
 		'eslint-config-tamia/rules/react',
 	].map(require.resolve),
-	parser: 'babel-eslint',
 	rules: {},
 };
