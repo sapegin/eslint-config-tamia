@@ -120,7 +120,7 @@ module.exports = {
 		}],
 		// Restrict file extensions that may contain JSX
 		'react/jsx-filename-extension': [2, {
-			extensions: ['.js'],
+			extensions: ['.js', '.jsx'],
 		}],
 		// Prevent usage of the return value of React.render
 		'react/no-render-return-value': 2,
