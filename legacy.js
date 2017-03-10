@@ -9,9 +9,8 @@ module.exports = {
 	].map(require.resolve),
 	env: {
 		browser: true,
-		node: true,
-		amd: false,
 		mocha: true,
+		jest: true,
 	},
 	globals: {},
 	rules: {},
