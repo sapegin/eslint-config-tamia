@@ -136,7 +136,7 @@ module.exports = {
 		// Prevent invalid characters from appearing in markup
 		'react/no-unescaped-entities': 2,
 		// Configure the position of the first property
-		'react/jsx-first-prop-new-line': [2, 'multiline-multiprop'],
+		'react/jsx-first-prop-new-line': [2, 'multiline'],
 		// Validate whitespace in and around the JSX opening and closing brackets
 		'react/jsx-tag-spacing': [2, {
 			closingSlash: 'never',
@@ -145,5 +145,7 @@ module.exports = {
 		}],
 		// Prevent void DOM elements (e.g. <img />, <br />) from receiving children
 		'react/void-dom-elements-no-children': 2,
+		// Enforce style prop value being an object
+		'react/style-prop-object': 2,
 	},
 };
