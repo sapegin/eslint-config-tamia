@@ -28,12 +28,12 @@
   "devDependencies": {
     "babel-eslint": "^7.1.1",
     "chai": "^3.5.0",
-    "eslint": "^3.13.1",
-    "eslint-plugin-react": "^6.9.0",
+    "eslint": "^3.17.1",
+    "eslint-plugin-react": "^6.10.0",
     "mocha": "^3.2.0",
     "react": "^15.4.2",
     "semantic-release": "^6.3.2",
-    "semantic-release-tamia": "^1.1.0"
+    "semantic-release-tamia": "^1.1.1"
   },
   "peerDependencies": {
     "eslint": ">=3.10.0"

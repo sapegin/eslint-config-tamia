@@ -36,8 +36,9 @@ module.exports = {
 		// Validate JSX has key prop when in array or iterator
 		'react/jsx-key': 0,
 		// Limit maximum of props on a single line in JSX
-		'react/jsx-max-props-per-line': [0, {
-			maximum: 3,
+		'react/jsx-max-props-per-line': [2, {
+			maximum: 1,
+			when: 'multiline',
 		}],
 		// Prevent usage of .bind() and arrow functions in JSX props
 		'react/jsx-no-bind': 0,
@@ -142,5 +143,7 @@ module.exports = {
 			beforeSelfClosing: 'always',
 			afterOpening: 'never',
 		}],
+		// Prevent void DOM elements (e.g. <img />, <br />) from receiving children
+		'react/void-dom-elements-no-children': 2,
 	},
 };
