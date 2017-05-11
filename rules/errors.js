@@ -57,11 +57,14 @@ module.exports = {
 		// Disallow comparisons with the value NaN
 		'use-isnan': 2,
 		// Ensure JSDoc comments are valid
-		'valid-jsdoc': [2, {
-			requireParamDescription: false,
-			requireReturnDescription: false,
-			requireReturn: false,
-		}],
+		'valid-jsdoc': [
+			2,
+			{
+				requireParamDescription: false,
+				requireReturnDescription: false,
+				requireReturn: false,
+			},
+		],
 		// Ensure that the results of typeof are compared against a valid string
 		'valid-typeof': 2,
 		// Avoid code that looks like two expressions but is actually one

@@ -13,10 +13,13 @@ module.exports = {
 		// Require parens in arrow function arguments
 		'arrow-parens': 0,
 		// Require space before/after arrow function's arrow
-		'arrow-spacing': [2, {
-			before: true,
-			after: true,
-		}],
+		'arrow-spacing': [
+			2,
+			{
+				before: true,
+				after: true,
+			},
+		],
 		// Verify super() callings in constructors
 		'constructor-super': 0,
 		// Enforce the spacing around the * in generator functions
@@ -24,9 +27,12 @@ module.exports = {
 		// Disallow modifying variables of class declarations
 		'no-class-assign': 0,
 		// Disallow arrow functions where they could be confused with comparisons
-		'no-confusing-arrow': [2, {
-			allowParens: true,
-		}],
+		'no-confusing-arrow': [
+			2,
+			{
+				allowParens: true,
+			},
+		],
 		// Disallow modifying variables that are declared using const
 		'no-const-assign': 2,
 		// Disallow duplicate imports

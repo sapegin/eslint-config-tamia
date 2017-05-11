@@ -13,9 +13,12 @@ module.exports = {
 		// Require default case in switch statements
 		'default-case': 2,
 		// Encourages use of dot notation whenever possible
-		'dot-notation': [2, {
-			allowKeywords: true,
-		}],
+		'dot-notation': [
+			2,
+			{
+				allowKeywords: true,
+			},
+		],
 		// Enforces consistent newlines before or after dots
 		'dot-location': 0,
 		// Require the use of === and !==
@@ -43,11 +46,14 @@ module.exports = {
 		// Disallow the use of leading or trailing decimal points in numeric literals
 		'no-floating-decimal': 2,
 		// Disallow the type conversions with shorter notations
-		'no-implicit-coercion': [2, {
-			boolean: false,
-			number: true,
-			string: true,
-		}],
+		'no-implicit-coercion': [
+			2,
+			{
+				boolean: false,
+				number: true,
+				string: true,
+			},
+		],
 		// Disallow use of eval()-like methods
 		'no-implied-eval': 2,
 		// Disallow this keywords outside of classes or class-like objects
@@ -55,20 +61,26 @@ module.exports = {
 		// Disallow usage of __iterator__ property
 		'no-iterator': 2,
 		// Disallow use of labels for anything other then loops and switches
-		'no-labels': [2, {
-			allowLoop: true,
-			allowSwitch: true,
-		}],
+		'no-labels': [
+			2,
+			{
+				allowLoop: true,
+				allowSwitch: true,
+			},
+		],
 		// Disallow unnecessary nested blocks
 		'no-lone-blocks': 2,
 		// Disallow creation of functions within loops
 		'no-loop-func': 2,
 		// Disallow use of multiple spaces
-		'no-multi-spaces': [2, {
-			exceptions: {
-				Property: false,
+		'no-multi-spaces': [
+			2,
+			{
+				exceptions: {
+					Property: false,
+				},
 			},
-		}],
+		],
 		// Disallow use of multiline strings
 		'no-multi-str': 2,
 		// Disallow assignment to native objects or read-only global variables
@@ -122,9 +134,13 @@ module.exports = {
 		// Require immediate function invocation to be wrapped in parentheses
 		'wrap-iife': [2, 'outside'],
 		// Require or disallow Yoda conditions
-		yoda: [2, 'never', {
-			exceptRange: true,
-		}],
+		yoda: [
+			2,
+			'never',
+			{
+				exceptRange: true,
+			},
+		],
 		// Disallow mixes of different operators
 		'no-mixed-operators': 2,
 		// Disallow Use of Chained Assignment Expressions

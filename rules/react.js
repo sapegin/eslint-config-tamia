@@ -1,7 +1,5 @@
 module.exports = {
-	plugins: [
-		'react',
-	],
+	plugins: ['react'],
 	parserOptions: {
 		ecmaFeatures: {
 			jsx: true,
@@ -19,16 +17,23 @@ module.exports = {
 		// Validate closing bracket location in JSX
 		'react/jsx-closing-bracket-location': [2, 'tag-aligned'],
 		// Enforce or disallow spaces inside of curly braces in JSX attributes
-		'react/jsx-curly-spacing': [0, 'never', {
-			allowMultiline: true,
-		}],
+		'react/jsx-curly-spacing': [
+			0,
+			'never',
+			{
+				allowMultiline: true,
+			},
+		],
 		// Disallow spaces around equal signs in JSX attributes
 		'react/jsx-equals-spacing': [2, 'never'],
 		// Enforce event handler naming conventions in JSX
-		'react/jsx-handler-names': [2, {
-			eventHandlerPrefix: 'handle',
-			eventHandlerPropPrefix: 'on',
-		}],
+		'react/jsx-handler-names': [
+			2,
+			{
+				eventHandlerPrefix: 'handle',
+				eventHandlerPropPrefix: 'on',
+			},
+		],
 		// Validate JSX indentation
 		'react/jsx-indent': [2, 'tab'],
 		// Validate props indentation in JSX
@@ -36,16 +41,22 @@ module.exports = {
 		// Validate JSX has key prop when in array or iterator
 		'react/jsx-key': 0,
 		// Limit maximum of props on a single line in JSX
-		'react/jsx-max-props-per-line': [2, {
-			maximum: 1,
-			when: 'multiline',
-		}],
+		'react/jsx-max-props-per-line': [
+			2,
+			{
+				maximum: 1,
+				when: 'multiline',
+			},
+		],
 		// Prevent usage of .bind() and arrow functions in JSX props
 		'react/jsx-no-bind': 0,
 		// Prevent duplicate props in JSX
-		'react/jsx-no-duplicate-props': [0, {
-			ignoreCase: false,
-		}],
+		'react/jsx-no-duplicate-props': [
+			0,
+			{
+				ignoreCase: false,
+			},
+		],
 		// Prevent usage of unwrapped JSX strings
 		'react/jsx-no-literals': 0,
 		// Prevent usage of unsafe target='_blank'
@@ -58,8 +69,6 @@ module.exports = {
 		'react/jsx-sort-prop-types': 0,
 		// Enforce props alphabetical sorting
 		'react/jsx-sort-props': 0,
-		// Validate spacing before closing bracket in JSX
-		'react/jsx-space-before-closing': [2, 'always'],
 		// Prevent React to be incorrectly marked as unused
 		'react/jsx-uses-react': 2,
 		// Prevent variables used in JSX to be incorrectly marked as unused
@@ -77,9 +86,12 @@ module.exports = {
 		// Prevent usage of isMounted
 		'react/no-is-mounted': 2,
 		// Prevent multiple component definition per file
-		'react/no-multi-comp': [2, {
-			ignoreStateless: true,
-		}],
+		'react/no-multi-comp': [
+			2,
+			{
+				ignoreStateless: true,
+			},
+		],
 		// Prevent usage of setState
 		'react/no-set-state': 0,
 		// Prevent using string references
@@ -91,38 +103,53 @@ module.exports = {
 		// Enforce stateless React Components to be written as a pure function
 		'react/prefer-stateless-function': 2,
 		// Prevent missing props validation in a React component definition
-		'react/prop-types': [2, {
-			ignore: [],
-			customValidators: [],
-		}],
+		'react/prop-types': [
+			2,
+			{
+				ignore: [],
+				customValidators: [],
+			},
+		],
 		// Prevent missing React when using JSX
 		'react/react-in-jsx-scope': 2,
 		// Prevent extra closing tags for components without children
-		'react/self-closing-comp': [2, {
-			component: true,
-			html: false,
-		}],
+		'react/self-closing-comp': [
+			2,
+			{
+				component: true,
+				html: false,
+			},
+		],
 		// Enforce component methods order
-		'react/sort-comp': [2, {
-			order: [
-				'lifecycle',
-				'/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/',
-				'everything-else',
-				'/^handle.+$/',
-				'/^render.+$/',
-				'render',
-			],
-		}],
+		'react/sort-comp': [
+			2,
+			{
+				order: [
+					'lifecycle',
+					'/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/',
+					'everything-else',
+					'/^handle.+$/',
+					'/^render.+$/',
+					'render',
+				],
+			},
+		],
 		// Prevent missing parentheses around multilines JSX
-		'react/jsx-wrap-multilines': [2, {
-			declaration: true,
-			assignment: true,
-			return: true,
-		}],
+		'react/jsx-wrap-multilines': [
+			2,
+			{
+				declaration: true,
+				assignment: true,
+				return: true,
+			},
+		],
 		// Restrict file extensions that may contain JSX
-		'react/jsx-filename-extension': [2, {
-			extensions: ['.js', '.jsx'],
-		}],
+		'react/jsx-filename-extension': [
+			2,
+			{
+				extensions: ['.js', '.jsx'],
+			},
+		],
 		// Prevent usage of the return value of React.render
 		'react/no-render-return-value': 2,
 		// Prevent comments from being inserted as text nodes
@@ -138,14 +165,19 @@ module.exports = {
 		// Configure the position of the first property
 		'react/jsx-first-prop-new-line': [2, 'multiline'],
 		// Validate whitespace in and around the JSX opening and closing brackets
-		'react/jsx-tag-spacing': [2, {
-			closingSlash: 'never',
-			beforeSelfClosing: 'always',
-			afterOpening: 'never',
-		}],
+		'react/jsx-tag-spacing': [
+			2,
+			{
+				closingSlash: 'never',
+				beforeSelfClosing: 'always',
+				afterOpening: 'never',
+			},
+		],
 		// Prevent void DOM elements (e.g. <img />, <br />) from receiving children
 		'react/void-dom-elements-no-children': 2,
 		// Enforce style prop value being an object
 		'react/style-prop-object': 2,
+		// Prevent usage of setState in componentWillUpdate
+		'react/no-will-update-set-state': 2,
 	},
 };
