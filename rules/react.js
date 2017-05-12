@@ -15,17 +15,11 @@ module.exports = {
 		// Enforce boolean attributes notation in JSX
 		'react/jsx-boolean-value': [2, 'never'],
 		// Validate closing bracket location in JSX
-		'react/jsx-closing-bracket-location': [2, 'tag-aligned'],
+		'react/jsx-closing-bracket-location': 0,
 		// Enforce or disallow spaces inside of curly braces in JSX attributes
-		'react/jsx-curly-spacing': [
-			0,
-			'never',
-			{
-				allowMultiline: true,
-			},
-		],
+		'react/jsx-curly-spacing': 0,
 		// Disallow spaces around equal signs in JSX attributes
-		'react/jsx-equals-spacing': [2, 'never'],
+		'react/jsx-equals-spacing': 0,
 		// Enforce event handler naming conventions in JSX
 		'react/jsx-handler-names': [
 			2,
@@ -35,19 +29,13 @@ module.exports = {
 			},
 		],
 		// Validate JSX indentation
-		'react/jsx-indent': [2, 'tab'],
+		'react/jsx-indent': 0,
 		// Validate props indentation in JSX
-		'react/jsx-indent-props': [2, 'tab'],
+		'react/jsx-indent-props': 0,
 		// Validate JSX has key prop when in array or iterator
 		'react/jsx-key': 0,
 		// Limit maximum of props on a single line in JSX
-		'react/jsx-max-props-per-line': [
-			2,
-			{
-				maximum: 1,
-				when: 'multiline',
-			},
-		],
+		'react/jsx-max-props-per-line': 0,
 		// Prevent usage of .bind() and arrow functions in JSX props
 		'react/jsx-no-bind': 0,
 		// Prevent duplicate props in JSX
@@ -135,14 +123,7 @@ module.exports = {
 			},
 		],
 		// Prevent missing parentheses around multilines JSX
-		'react/jsx-wrap-multilines': [
-			2,
-			{
-				declaration: true,
-				assignment: true,
-				return: true,
-			},
-		],
+		'react/jsx-wrap-multilines': 0,
 		// Restrict file extensions that may contain JSX
 		'react/jsx-filename-extension': [
 			2,
@@ -163,16 +144,9 @@ module.exports = {
 		// Prevent invalid characters from appearing in markup
 		'react/no-unescaped-entities': 2,
 		// Configure the position of the first property
-		'react/jsx-first-prop-new-line': [2, 'multiline'],
+		'react/jsx-first-prop-new-line': 0,
 		// Validate whitespace in and around the JSX opening and closing brackets
-		'react/jsx-tag-spacing': [
-			2,
-			{
-				closingSlash: 'never',
-				beforeSelfClosing: 'always',
-				afterOpening: 'never',
-			},
-		],
+		'react/jsx-tag-spacing': 0,
 		// Prevent void DOM elements (e.g. <img />, <br />) from receiving children
 		'react/void-dom-elements-no-children': 2,
 		// Enforce style prop value being an object
