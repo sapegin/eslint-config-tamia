@@ -1,3 +1,3 @@
 {
-  "extends": "tamia"
+  "extends": "./index.js"
 }

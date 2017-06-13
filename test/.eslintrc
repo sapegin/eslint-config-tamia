@@ -1,6 +1,6 @@
 {
 	"root": true,
-  "extends": "tamia/legacy",
+  "extends": "../legacy.js",
   "rules": {
 		"no-unused-expressions": 0
 	}

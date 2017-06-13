@@ -1,4 +1,4 @@
 {
 	"root": true,
-	"extends": "tamia/legacy"
+	"extends": "../../../legacy.js"
 }
