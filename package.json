@@ -12,6 +12,12 @@
     "type": "git",
     "url": "https://github.com/tamiadev/eslint-config-tamia"
   },
+  "files": [
+    "rules",
+    "index.js",
+    "legacy.js",
+    "react.js"
+  ],
   "keywords": [
     "eslintconfig",
     "tamia"
