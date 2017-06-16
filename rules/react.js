@@ -153,5 +153,7 @@ module.exports = {
 		'react/style-prop-object': 2,
 		// Prevent usage of setState in componentWillUpdate
 		'react/no-will-update-set-state': 2,
+		// Enforce all defaultProps have a corresponding non-required PropType
+		'react/default-props-match-prop-types': 2,
 	},
 };
