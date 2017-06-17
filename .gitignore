@@ -1,2 +1,13 @@
 node_modules
 Changelog.md
+
+coverage/
+node_modules/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.log
+.eslintcache

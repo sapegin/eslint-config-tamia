@@ -4,10 +4,12 @@
   "main": "index.js",
   "scripts": {
     "pretest": "npm run lint",
-    "test": "npm run mocha",
+    "test": "npm run test:jest",
     "lint": "eslint . --cache --fix",
-    "mocha": "mocha ./test",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "test:jest": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -34,11 +36,10 @@
   "homepage": "https://github.com/tamiadev/eslint-config-tamia",
   "devDependencies": {
     "babel-eslint": "^7.2.3",
-    "chai": "^3.5.0",
     "eslint": "^4.0.0",
     "eslint-plugin-prettier": "^2.1.2",
     "eslint-plugin-react": "^7.1.0",
-    "mocha": "^3.3.0",
+    "jest": "^20.0.4",
     "prettier": "^1.4.4",
     "prop-types": "^15.5.9",
     "react": "^15.5.4",
