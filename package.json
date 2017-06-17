@@ -3,9 +3,10 @@
   "description": "Tâmia’s ESLint config",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint . --fix",
+    "pretest": "npm run lint",
+    "test": "npm run mocha",
+    "lint": "eslint . --cache --fix",
     "mocha": "mocha ./test",
-    "test": "npm run mocha && npm run lint",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
