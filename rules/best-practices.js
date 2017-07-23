@@ -142,7 +142,7 @@ module.exports = {
 			},
 		],
 		// Disallow mixes of different operators
-		'no-mixed-operators': 2,
+		'no-mixed-operators': 0,
 		// Disallow Use of Chained Assignment Expressions
 		'no-multi-assign': 2,
 	},
