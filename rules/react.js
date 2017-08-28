@@ -155,5 +155,7 @@ module.exports = {
 		'react/no-will-update-set-state': 2,
 		// Enforce all defaultProps have a corresponding non-required PropType
 		'react/default-props-match-prop-types': 2,
+		// Prevents common typos
+		'react/no-typos': 2,
 	},
 };
