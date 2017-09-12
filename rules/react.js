@@ -125,12 +125,7 @@ module.exports = {
 		// Prevent missing parentheses around multilines JSX
 		'react/jsx-wrap-multilines': 0,
 		// Restrict file extensions that may contain JSX
-		'react/jsx-filename-extension': [
-			2,
-			{
-				extensions: ['.js', '.jsx'],
-			},
-		],
+		'react/jsx-filename-extension': 0,
 		// Prevent usage of the return value of React.render
 		'react/no-render-return-value': 2,
 		// Prevent comments from being inserted as text nodes
