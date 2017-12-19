@@ -1,6 +1,7 @@
 {
   "name": "eslint-config-tamia",
-  "description": "Tâmia’s ESLint config",
+  "description": "Tâmia ESLint config",
+  "version": "5.0.0",
   "main": "index.js",
   "scripts": {
     "pretest": "npm run lint",
