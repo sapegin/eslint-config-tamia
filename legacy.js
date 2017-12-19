@@ -1,15 +1,16 @@
+const modules = [
+	'./rules/best-practices',
+	'./rules/errors',
+	'./rules/legacy',
+	'./rules/node',
+	'./rules/style',
+	'./rules/variables',
+].map(require.resolve);
+
 module.exports = {
-	extends: [
-		'./rules/best-practices',
-		'./rules/errors',
-		'./rules/legacy',
-		'./rules/node',
-		'./rules/style',
-		'./rules/variables',
-	].map(require.resolve),
+	extends: ['eslint:recommended'].concat(modules),
 	env: {
 		browser: true,
-		mocha: true,
 		jest: true,
 	},
 	globals: {},

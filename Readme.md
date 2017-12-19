@@ -3,7 +3,9 @@
 [![Build Status](https://travis-ci.org/tamiadev/eslint-config-tamia.svg)](https://travis-ci.org/tamiadev/eslint-config-tamia)
 [![npm](https://img.shields.io/npm/v/eslint-config-tamia.svg)](https://www.npmjs.com/package/eslint-config-tamia)
 
-This package provides [Tâmia’s](http://tamiadev.github.io/tamia/) `.eslintrc` as an extensible shared config. Based on [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) and [Prettier](https://github.com/prettier/prettier).
+This package provides [Tâmia’s](http://tamiadev.github.io/tamia/) `.eslintrc` as an extensible shared config. Based on [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb).
+
+**Should be used with [Prettier](https://prettier.io/), has no own code style rules.**
 
 ## Usage
 
@@ -13,7 +15,7 @@ We export three ESLint configurations:
 
 Our default export contains all of our ESLint rules, including EcmaScript 6+. It requires `eslint`.
 
-`npm install --save-dev eslint-config-tamia eslint eslint-plugin-prettier prettier`
+`npm install --save-dev eslint-config-tamia eslint`
 
 `.eslintrc`:
 
@@ -27,7 +29,7 @@ Our default export contains all of our ESLint rules, including EcmaScript 6+. It
 
 Lints ES6+ but and React. Requires `eslint` and `eslint-plugin-react`.
 
-`npm install --save-dev eslint-config-tamia eslint-plugin-react eslint eslint-plugin-prettier prettier`
+`npm install --save-dev eslint-config-tamia eslint-plugin-react eslint`
 
 `.eslintrc`:
 
@@ -41,7 +43,7 @@ Lints ES6+ but and React. Requires `eslint` and `eslint-plugin-react`.
 
 Lints ES5 and below. Only requires `eslint`.
 
-`npm install --save-dev eslint-config-tamia eslint eslint-plugin-prettier prettier`
+`npm install --save-dev eslint-config-tamia eslint`
 
 `.eslintrc`:
 
@@ -61,7 +63,7 @@ Lints ES5 and below. Only requires `eslint`.
 - Make `const`, not `var`.
 - Use `===` and `!==` over `==` and `!=`.
 - Return early.
-- Limit line lengths to 100 chars.
+- Limit line lengths to 80 chars.
 - Prefer readability over religion.
 - Use ES6.
 
