@@ -36,17 +36,15 @@
   },
   "homepage": "https://github.com/tamiadev/eslint-config-tamia",
   "devDependencies": {
-    "babel-eslint": "^7.2.3",
-    "eslint": "^4.13.1",
-    "eslint-plugin-react": "^7.5.1",
-    "jest": "^21.0.2",
-    "prop-types": "^15.6.0",
-    "react": "^16.2.0",
+    "eslint": "^5.0.1",
+    "eslint-plugin-react": "^7.10.0",
+    "jest": "^23.3.0",
+    "react": "^16.4.1",
     "semantic-release": "^6.3.6",
     "semantic-release-tamia": "^1.1.1"
   },
   "peerDependencies": {
-    "eslint": ">=4"
+    "eslint": ">=5"
   },
   "release": {
     "analyzeCommits": "semantic-release-tamia/analyzeCommits",

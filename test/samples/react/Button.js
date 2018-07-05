@@ -1,30 +1,24 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import sample from 'lodash/sample';
 
 import s from './RandomButton.css';
+
+const VARIANTS = ['pizza', 'coffee', 'burger'];
 
 /**
  * Button that changes label on every click.
  */
 export default class RandomButton extends Component {
-	static propTypes = {
-		/**
-		 * List of possible labels.
-		 */
-		variants: PropTypes.array.isRequired,
-	};
-
-	constructor(props) {
+	constructor() {
 		super();
 		this.state = {
-			label: sample(props.variants),
+			label: sample(VARIANTS),
 		};
 	}
 
 	handleClick() {
 		this.setState({
-			label: sample(this.props.variants),
+			label: sample(VARIANTS),
 		});
 	}
 
