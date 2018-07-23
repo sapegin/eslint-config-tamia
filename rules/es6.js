@@ -23,8 +23,6 @@ module.exports = {
 		'prefer-spread': 2,
 		// Suggest using the rest parameters instead of arguments
 		'prefer-rest-params': 2,
-		// Enforce usage of spacing in template strings
-		'template-curly-spacing': [2, 'never'],
 		// Disallow renaming import, export, and destructured assignments to the same name
 		'no-useless-rename': 2,
 	},
