@@ -27,7 +27,7 @@ Our default export contains all of our ESLint rules, including EcmaScript 6+. It
 
 ### eslint-config-tamia/react
 
-Lints ES6+ but and React. Requires `eslint` and `eslint-plugin-react`.
+Lints ES6+ and React. Requires `eslint` and `eslint-plugin-react`.
 
 `npm install --save-dev eslint-config-tamia eslint-plugin-react eslint`
 
@@ -36,6 +36,36 @@ Lints ES6+ but and React. Requires `eslint` and `eslint-plugin-react`.
 ```json
 {
   "extends": "tamia/react"
+}
+```
+
+### eslint-config-tamia/typescript
+
+Lints TypeScript. Requires `eslint` and `@typescript-eslint/eslint-plugin`.
+
+`npm install --save-dev eslint-config-tamia @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint`
+
+`.eslintrc`:
+
+```json
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": "tamia/typescript"
+}
+```
+
+### eslint-config-tamia/typescript-react
+
+Lints TypeScript and React. Requires `eslint`, `@typescript-eslint/eslint-plugin` and `eslint-plugin-react`.
+
+`npm install --save-dev eslint-config-tamia @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react eslint`
+
+`.eslintrc`:
+
+```json
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": "tamia/typescript-react"
 }
 ```
 
