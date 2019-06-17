@@ -35,10 +35,12 @@
   },
   "homepage": "https://github.com/tamiadev/eslint-config-tamia",
   "devDependencies": {
-    "eslint": "^5.0.1",
-    "eslint-plugin-react": "^7.10.0",
-    "jest": "^23.3.0",
-    "react": "^16.4.1"
+    "@typescript-eslint/eslint-plugin": "^1.10.2",
+    "@typescript-eslint/parser": "^1.10.2",
+    "eslint": "^5.16.0",
+    "eslint-plugin-react": "^7.13.0",
+    "jest": "^24.8.0",
+    "react": "^16.8.6"
   },
   "peerDependencies": {
     "eslint": ">=5"

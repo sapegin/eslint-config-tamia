@@ -49,7 +49,6 @@ Lints TypeScript. Requires `eslint` and `@typescript-eslint/eslint-plugin`.
 
 ```json
 {
-  "parser": "@typescript-eslint/parser",
   "extends": "tamia/typescript"
 }
 ```
@@ -64,7 +63,6 @@ Lints TypeScript and React. Requires `eslint`, `@typescript-eslint/eslint-plugin
 
 ```json
 {
-  "parser": "@typescript-eslint/parser",
   "extends": "tamia/typescript-react"
 }
 ```
