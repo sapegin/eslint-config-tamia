@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-tamia",
   "description": "Tâmia ESLint config",
-  "version": "5.0.0",
+  "version": "0.0.0-development",
   "main": "index.js",
   "scripts": {
     "pretest": "npm run lint",
@@ -17,9 +17,7 @@
   },
   "files": [
     "rules",
-    "index.js",
-    "legacy.js",
-    "react.js"
+    "*.js"
   ],
   "keywords": [
     "eslintconfig",
