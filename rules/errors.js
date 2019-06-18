@@ -8,14 +8,5 @@ module.exports = {
 		'no-await-in-loop': 2,
 		// Disallow use of Object.prototypes builtins directly
 		'no-prototype-builtins': 2,
-		// Ensure JSDoc comments are valid
-		'valid-jsdoc': [
-			2,
-			{
-				requireParamDescription: false,
-				requireReturnDescription: false,
-				requireReturn: false,
-			},
-		],
 	},
 };

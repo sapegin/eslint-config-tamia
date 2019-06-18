@@ -21,6 +21,8 @@ module.exports = {
 		eqeqeq: [2, 'allow-null'],
 		// Disallow the use of alert, confirm, and prompt
 		'no-alert': 2,
+		// Disallow using an async function as a Promise executor
+		'no-async-promise-executor': 2,
 		// Disallow use of arguments.caller or arguments.callee
 		'no-caller': 2,
 		// Disallow else after a return in an if
@@ -58,6 +60,8 @@ module.exports = {
 		'no-lone-blocks': 2,
 		// Disallow creation of functions within loops
 		'no-loop-func': 2,
+		// Disallow characters which are made with multiple code points in character class syntax
+		'no-misleading-character-class': 2,
 		// Disallow use of multiline strings
 		'no-multi-str': 2,
 		// Disallow use of new operator for Function object
@@ -84,6 +88,8 @@ module.exports = {
 		'no-unused-expressions': 2,
 		// Disallow unnecessary .call() and .apply()
 		'no-useless-call': 2,
+		// Disallow unnecessary catch clauses
+		'no-useless-catch': 2,
 		// Disallow unnecessary concatenation of literals or template literals
 		'no-useless-concat': 2,
 		// Disallow redundant return statements

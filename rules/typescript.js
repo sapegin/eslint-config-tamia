@@ -26,7 +26,6 @@ module.exports = {
 		'@typescript-eslint/prefer-namespace-keyword': 'error',
 
 		// Disable generic rules that conflict with TypeScript
-		'valid-jsdoc': 'off',
 		'camelcase': 'off',
 		'no-array-constructor': 'off',
 		'no-unused-vars': 'off',
