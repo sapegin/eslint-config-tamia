@@ -22,7 +22,6 @@ module.exports = {
 		'@typescript-eslint/no-unused-vars': 'warn',
 		'@typescript-eslint/no-use-before-define': 'error',
 		'@typescript-eslint/no-var-requires': 'error',
-		'@typescript-eslint/prefer-interface': 'error',
 		'@typescript-eslint/prefer-namespace-keyword': 'error',
 
 		// Disable generic rules that conflict with TypeScript
