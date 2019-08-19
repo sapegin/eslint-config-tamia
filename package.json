@@ -33,14 +33,14 @@
   },
   "homepage": "https://github.com/tamiadev/eslint-config-tamia",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^1.10.2",
-    "@typescript-eslint/parser": "^1.10.2",
-    "eslint": "^5.16.0",
-    "eslint-plugin-react": "^7.13.0",
-    "jest": "^24.8.0",
-    "react": "^16.8.6"
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "eslint": "^6.2.0",
+    "eslint-plugin-react": "^7.14.3",
+    "jest": "^24.9.0",
+    "react": "^16.9.0"
   },
   "peerDependencies": {
-    "eslint": ">=5"
+    "eslint": ">=6"
   }
 }
