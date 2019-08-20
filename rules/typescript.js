@@ -9,25 +9,53 @@ module.exports = {
 		'@typescript-eslint/class-name-casing': 'error',
 		'@typescript-eslint/explicit-member-accessibility': 'error',
 		'@typescript-eslint/interface-name-prefix': 'error',
-		'@typescript-eslint/no-angle-bracket-type-assertion': 'error',
+		'@typescript-eslint/consistent-type-assertions': 'error',
 		'@typescript-eslint/no-array-constructor': 'error',
 		'@typescript-eslint/no-empty-interface': 'error',
 		'@typescript-eslint/no-inferrable-types': 'error',
 		'@typescript-eslint/no-misused-new': 'error',
 		'@typescript-eslint/no-namespace': 'error',
 		'@typescript-eslint/no-non-null-assertion': 'error',
-		'@typescript-eslint/no-object-literal-type-assertion': 'error',
 		'@typescript-eslint/no-parameter-properties': 'error',
-		'@typescript-eslint/no-triple-slash-reference': 'error',
+		'@typescript-eslint/triple-slash-reference': 'error',
 		'@typescript-eslint/no-unused-vars': 'warn',
 		'@typescript-eslint/no-use-before-define': 'error',
 		'@typescript-eslint/no-var-requires': 'error',
 		'@typescript-eslint/prefer-namespace-keyword': 'error',
-
-		// Disable generic rules that conflict with TypeScript
-		'camelcase': 'off',
-		'no-array-constructor': 'off',
-		'no-unused-vars': 'off',
-		'no-use-before-define': 'off',
 	},
+	overrides: [
+		{
+		  files: ['*.ts', '*.tsx'],
+		  rules: {
+			// Disable generic rules that conflict with TypeScript
+			'camelcase': 'off',
+			'no-array-constructor': 'off',
+			'no-unused-vars': 'off',
+			'no-use-before-define': 'off',
+
+			//Checked by Typescript - ts(2378)
+			'getter-return': 'off',
+			// Checked by Typescript - ts(2300)
+			'no-dupe-args': 'off',
+			// Checked by Typescript - ts(1117)
+			'no-dupe-keys': 'off',
+			// Checked by Typescript - ts(7027)
+			'no-unreachable': 'off',
+			// Checked by Typescript - ts(2367)
+			'valid-typeof': 'off',
+			// Checked by Typescript - ts(2588)
+			'no-const-assign': 'off',
+			// Checked by Typescript - ts(2588)
+			'no-new-symbol': 'off',
+			// Checked by Typescript - ts(2376)
+			'no-this-before-super': 'off',
+			// This is checked by Typescript using the option `strictNullChecks`.
+			'no-undef': 'off',
+			// This is already checked by Typescript.
+			'no-dupe-class-members': 'off',
+			// This is already checked by Typescript.
+			'no-redeclare': 'off',
+		  },
+		},
+	  ],
 };
