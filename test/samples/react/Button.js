@@ -16,7 +16,7 @@ export default class RandomButton extends Component {
 		};
 	}
 
-	handleClick() {
+	handleClick = () => {
 		this.setState({
 			label: sample(VARIANTS),
 		});
@@ -24,7 +24,7 @@ export default class RandomButton extends Component {
 
 	render() {
 		return (
-			<button className={s.root} onClick={this.handleClick.bind(this)}>
+			<button className={s.root} onClick={this.handleClick}>
 				{this.state.label}
 			</button>
 		);

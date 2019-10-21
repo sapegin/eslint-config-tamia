@@ -1,7 +1,7 @@
 {
-	"root": true,
+  "root": true,
   "extends": "../legacy.js",
   "rules": {
-		"no-unused-expressions": 0
-	}
+    "no-unused-expressions": 0
+  }
 }

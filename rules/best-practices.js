@@ -26,7 +26,7 @@ module.exports = {
 		// Disallow use of arguments.caller or arguments.callee
 		'no-caller': 2,
 		// Disallow else after a return in an if
-		'no-else-return': 2,
+		'no-else-return': 0,
 		// Disallow use of eval()
 		'no-eval': 2,
 		// Disallow adding to native types
@@ -66,7 +66,7 @@ module.exports = {
 		'no-multi-str': 2,
 		// Disallow use of new operator for Function object
 		'no-new-func': 2,
-		// Disallows creating new instances of String,Number, and Boolean
+		// Disallows creating new instances of String, Number, and Boolean
 		'no-new-wrappers': 2,
 		// Disallow use of octal escape sequences in string literals, such as var foo = 'Copyright \251';
 		'no-octal-escape': 2,

@@ -38,14 +38,19 @@ module.exports = {
 		// Validate props indentation in JSX
 		'react/jsx-indent-props': 0,
 		// Validate JSX has key prop when in array or iterator
-		'react/jsx-key': 0,
+		'react/jsx-key': 2,
 		// Limit maximum of props on a single line in JSX
 		'react/jsx-max-props-per-line': 0,
 		// Prevent usage of .bind() and arrow functions in JSX props
-		'react/jsx-no-bind': 0,
+		'react/jsx-no-bind': [
+			2,
+			{
+				allowArrowFunctions: true
+			}
+		],
 		// Prevent duplicate props in JSX
 		'react/jsx-no-duplicate-props': [
-			0,
+			2,
 			{
 				ignoreCase: false,
 			},
@@ -75,7 +80,7 @@ module.exports = {
 		// Prevent usage of setState in componentDidUpdate
 		'react/no-did-update-set-state': 2,
 		// Prevent direct mutation of this.state
-		'react/no-direct-mutation-state': 0,
+		'react/no-direct-mutation-state': 2,
 		// Prevent usage of isMounted
 		'react/no-is-mounted': 2,
 		// Prevent multiple component definition per file
@@ -88,7 +93,7 @@ module.exports = {
 		// Prevent usage of setState
 		'react/no-set-state': 0,
 		// Prevent using string references
-		'react/no-string-refs': 0,
+		'react/no-string-refs': 2,
 		// Prevent usage of unknown DOM property
 		'react/no-unknown-property': 2,
 		// Require ES6 class declarations over React.createClass
