@@ -123,13 +123,33 @@ module.exports = {
 			2,
 			{
 				order: [
+					'static-variables',
+					'instance-variables',
 					'lifecycle',
-					'/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/',
 					'everything-else',
-					'/^handle.+$/',
-					'/^render.+$/',
 					'render',
 				],
+				groups: {
+					lifecycle: [
+					  'constructor',
+					  'getDefaultProps',
+					  'getInitialState',
+					  'getChildContext',
+					  'getDerivedStateFromProps',
+					  'componentWillMount',
+					  'UNSAFE_componentWillMount',
+					  'componentDidMount',
+					  'componentWillReceiveProps',
+					  'UNSAFE_componentWillReceiveProps',
+					  'shouldComponentUpdate',
+					  'componentWillUpdate',
+					  'UNSAFE_componentWillUpdate',
+					  'getSnapshotBeforeUpdate',
+					  'componentDidUpdate',
+					  'componentDidCatch',
+					  'componentWillUnmount'
+					]
+				  }
 			},
 		],
 		// Prevent missing parentheses around multilines JSX
