@@ -1,16 +1,8 @@
-sudo: false
 language: node_js
-cache:
-  directories:
-    - $HOME/.npm
-    - node_modules
 node_js:
-  - 8
+  - 10
 after_success:
-  - npm install --no-save semantic-release semantic-release-tamia
-  - >-
-    npx travis-deploy-once "semantic-release --analyze-commits semantic-release-tamia/analyzeCommits --verify-release
-    semantic-release-tamia/verifyRelease --generate-notes semantic-release-tamia/generateNotes"
+  - npx semantic-release
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
