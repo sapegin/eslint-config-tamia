@@ -19,6 +19,7 @@ module.exports = {
 		'@typescript-eslint/no-parameter-properties': 'error',
 		'@typescript-eslint/triple-slash-reference': 'error',
 		'@typescript-eslint/no-unused-vars': 'warn',
+		'@typescript-eslint/no-unused-expressions': 'error',
 		'@typescript-eslint/no-use-before-define': 'error',
 		'@typescript-eslint/no-var-requires': 'error',
 		'@typescript-eslint/prefer-namespace-keyword': 'error',
@@ -31,6 +32,7 @@ module.exports = {
 			'camelcase': 'off',
 			'no-array-constructor': 'off',
 			'no-unused-vars': 'off',
+			'no-unused-expressions': 'off',
 			'no-use-before-define': 'off',
 
 			//Checked by Typescript - ts(2378)
