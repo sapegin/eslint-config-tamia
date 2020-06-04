@@ -5,10 +5,11 @@ module.exports = {
 		'@typescript-eslint/adjacent-overload-signatures': 'error',
 		'@typescript-eslint/array-type': 'error',
 		'@typescript-eslint/ban-types': 'error',
-		'@typescript-eslint/camelcase': 'error',
-		'@typescript-eslint/class-name-casing': 'error',
+		'@typescript-eslint/naming-convention': ['error', {
+			'selector': 'default',
+      		'format': ['camelCase']
+		}],
 		'@typescript-eslint/explicit-member-accessibility': 'error',
-		'@typescript-eslint/interface-name-prefix': 'error',
 		'@typescript-eslint/consistent-type-assertions': 'error',
 		'@typescript-eslint/no-array-constructor': 'error',
 		'@typescript-eslint/no-empty-interface': 'error',
