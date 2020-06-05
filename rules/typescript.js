@@ -14,7 +14,7 @@ module.exports = {
 			"format": ["camelCase", "PascalCase", "UPPER_CASE"]
 		},
 		{
-			"selector": "parameter",
+			"selector": "property",
 			"format": ["camelCase", "PascalCase", "snake_case"]
 		},
 		{
