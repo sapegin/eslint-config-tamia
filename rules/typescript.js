@@ -5,7 +5,23 @@ module.exports = {
 		'@typescript-eslint/adjacent-overload-signatures': 'error',
 		'@typescript-eslint/array-type': 'error',
 		'@typescript-eslint/ban-types': 'error',
-		'@typescript-eslint/naming-convention': 'error',
+		'@typescript-eslint/naming-convention': ['error', {
+			"selector": "default",
+			"format": ["camelCase"]
+		},
+		{
+			"selector": "variableLike",
+			"format": ["camelCase", "PascalCase", "UPPER_CASE"]
+		},
+		{
+			"selector": "parameter",
+			"format": ["camelCase"],
+			"leadingUnderscore": "allow"
+		},
+		{
+			"selector": "typeLike",
+			"format": ["PascalCase"]
+		}],
 		'@typescript-eslint/explicit-member-accessibility': 'error',
 		'@typescript-eslint/consistent-type-assertions': 'error',
 		'@typescript-eslint/no-array-constructor': 'error',
