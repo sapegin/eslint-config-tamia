@@ -20,6 +20,12 @@ module.exports = {
 		{
 			"selector": "typeLike",
 			"format": ["PascalCase"]
+		},
+		{
+			// React: dangerouslySetInnerHTML={{__html: '<div />'}}
+			selector: 'property',
+			filter: '^__html$',
+			format: null,
 		}],
 		'@typescript-eslint/explicit-member-accessibility': 'error',
 		'@typescript-eslint/consistent-type-assertions': 'error',
