@@ -7,21 +7,21 @@ module.exports = {
 		'@typescript-eslint/ban-types': 'error',
 		'@typescript-eslint/naming-convention': ['error',
 			{
-				"selector": "default",
-				"format": ["camelCase"]
+				selector: 'default',
+				format: ['camelCase']
 			},
 			{
-				"selector": "variableLike",
-				"format": ["camelCase", "PascalCase", "UPPER_CASE"]
+				selector: 'variableLike',
+				format: ['camelCase', 'PascalCase', 'UPPER_CASE']
 			},
 			{
-				"selector": "property",
-				"format": ["camelCase", "PascalCase", "snake_case", "UPPER_CASE"],
-				leadingUnderscore: 'allow'
+				selector: 'property',
+				format: ['camelCase', 'PascalCase', 'snake_case', 'UPPER_CASE'],
+				leadingUnderscore: 'allow',
 			},
 			{
-				"selector": "typeLike",
-				"format": ["PascalCase"]
+				selector: 'typeLike',
+				format: ['PascalCase']
 			},
 			{
 				// React: dangerouslySetInnerHTML={{__html: '<div />'}}
@@ -33,6 +33,12 @@ module.exports = {
 				// Unused function argument
 				selector: 'variableLike',
 				filter: '^_$',
+				format: null,
+			},
+			{
+				// Quoted property names
+				selector: 'property',
+				filter: '[^a-zA-Z0-9_]',
 				format: null,
 			},
 		],
