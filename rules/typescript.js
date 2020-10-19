@@ -5,28 +5,37 @@ module.exports = {
 		'@typescript-eslint/adjacent-overload-signatures': 'error',
 		'@typescript-eslint/array-type': 'error',
 		'@typescript-eslint/ban-types': 'error',
-		'@typescript-eslint/naming-convention': ['error', {
-			"selector": "default",
-			"format": ["camelCase"]
-		},
-		{
-			"selector": "variableLike",
-			"format": ["camelCase", "PascalCase", "UPPER_CASE"]
-		},
-		{
-			"selector": "property",
-			"format": ["camelCase", "PascalCase", "snake_case"]
-		},
-		{
-			"selector": "typeLike",
-			"format": ["PascalCase"]
-		},
-		{
-			// React: dangerouslySetInnerHTML={{__html: '<div />'}}
-			selector: 'property',
-			filter: '^__html$',
-			format: null,
-		}],
+		'@typescript-eslint/naming-convention': ['error',
+			{
+				"selector": "default",
+				"format": ["camelCase"]
+			},
+			{
+				"selector": "variableLike",
+				"format": ["camelCase", "PascalCase", "UPPER_CASE"]
+			},
+			{
+				"selector": "property",
+				"format": ["camelCase", "PascalCase", "snake_case", "UPPER_CASE"],
+				leadingUnderscore: 'allow'
+			},
+			{
+				"selector": "typeLike",
+				"format": ["PascalCase"]
+			},
+			{
+				// React: dangerouslySetInnerHTML={{__html: '<div />'}}
+				selector: 'property',
+				filter: '^__html$',
+				format: null,
+			},
+			{
+				// Unused function argument
+				selector: 'variableLike',
+				filter: '^_$',
+				format: null,
+			},
+		],
 		'@typescript-eslint/explicit-member-accessibility': 'error',
 		'@typescript-eslint/consistent-type-assertions': 'error',
 		'@typescript-eslint/no-array-constructor': 'error',
