@@ -24,6 +24,10 @@ module.exports = {
 				format: ['PascalCase']
 			},
 			{
+				selector: 'enumMember',
+				format: ['PascalCase', 'UPPER_CASE'],
+			},
+			{
 				// React: dangerouslySetInnerHTML={{__html: '<div />'}}
 				selector: 'property',
 				filter: '^__html$',
