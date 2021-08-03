@@ -1,7 +1,6 @@
 # eslint-config-tamia
 
-[![Build Status](https://travis-ci.org/tamiadev/eslint-config-tamia.svg)](https://travis-ci.org/tamiadev/eslint-config-tamia)
-[![npm](https://img.shields.io/npm/v/eslint-config-tamia.svg)](https://www.npmjs.com/package/eslint-config-tamia)
+[![npm](https://img.shields.io/npm/v/eslint-config-tamia.svg)](https://www.npmjs.com/package/eslint-config-tamia) [![Node.js CI status](https://github.com/tamiadev/eslint-config-tamia/workflows/Node.js%20CI/badge.svg)](https://github.com/tamiadev/eslint-config-tamia/actions)
 
 This package provides [Tâmia’s](http://tamiadev.github.io/tamia/) `.eslintrc` as an extensible shared config. Based on [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb).
 
