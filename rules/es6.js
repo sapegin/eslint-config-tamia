@@ -5,6 +5,7 @@ module.exports = {
 	parserOptions: {
 		ecmaVersion: 2020,
 		sourceType: 'module',
+		requireConfigFile: false,
 	},
 	rules: {
 		// Disallow duplicate imports
