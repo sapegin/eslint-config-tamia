@@ -5,44 +5,32 @@ module.exports = {
 		'@typescript-eslint/adjacent-overload-signatures': 'error',
 		'@typescript-eslint/array-type': 'error',
 		'@typescript-eslint/ban-types': 'error',
-		'@typescript-eslint/naming-convention': ['error',
+		'@typescript-eslint/naming-convention': [
+			'error',
 			{
 				selector: 'default',
-				format: ['camelCase']
+				format: ['camelCase'],
 			},
 			{
 				selector: 'variableLike',
-				format: ['camelCase', 'PascalCase', 'UPPER_CASE']
+				format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
 			},
 			{
 				selector: 'property',
-				format: ['camelCase', 'PascalCase', 'snake_case', 'UPPER_CASE'],
-				leadingUnderscore: 'allow',
+				format: null,
 			},
 			{
 				selector: 'typeLike',
-				format: ['PascalCase']
+				format: ['PascalCase'],
 			},
 			{
 				selector: 'enumMember',
 				format: ['PascalCase', 'UPPER_CASE'],
 			},
 			{
-				// React: dangerouslySetInnerHTML={{__html: '<div />'}}
-				selector: 'property',
-				filter: '^__html$',
-				format: null,
-			},
-			{
 				// Unused function argument
 				selector: 'variableLike',
 				filter: '^_$',
-				format: null,
-			},
-			{
-				// Quoted property names
-				selector: 'property',
-				filter: '[^a-zA-Z0-9_]',
 				format: null,
 			},
 		],
@@ -64,38 +52,38 @@ module.exports = {
 	},
 	overrides: [
 		{
-		  files: ['*.ts', '*.tsx'],
-		  rules: {
-			// Disable generic rules that conflict with TypeScript
-			'camelcase': 'off',
-			'no-array-constructor': 'off',
-			'no-unused-vars': 'off',
-			'no-unused-expressions': 'off',
-			'no-use-before-define': 'off',
+			files: ['*.ts', '*.tsx'],
+			rules: {
+				// Disable generic rules that conflict with TypeScript
+				camelcase: 'off',
+				'no-array-constructor': 'off',
+				'no-unused-vars': 'off',
+				'no-unused-expressions': 'off',
+				'no-use-before-define': 'off',
 
-			//Checked by Typescript - ts(2378)
-			'getter-return': 'off',
-			// Checked by Typescript - ts(2300)
-			'no-dupe-args': 'off',
-			// Checked by Typescript - ts(1117)
-			'no-dupe-keys': 'off',
-			// Checked by Typescript - ts(7027)
-			'no-unreachable': 'off',
-			// Checked by Typescript - ts(2367)
-			'valid-typeof': 'off',
-			// Checked by Typescript - ts(2588)
-			'no-const-assign': 'off',
-			// Checked by Typescript - ts(2588)
-			'no-new-symbol': 'off',
-			// Checked by Typescript - ts(2376)
-			'no-this-before-super': 'off',
-			// This is checked by Typescript using the option `strictNullChecks`.
-			'no-undef': 'off',
-			// This is already checked by Typescript.
-			'no-dupe-class-members': 'off',
-			// This is already checked by Typescript.
-			'no-redeclare': 'off',
-		  },
+				//Checked by Typescript - ts(2378)
+				'getter-return': 'off',
+				// Checked by Typescript - ts(2300)
+				'no-dupe-args': 'off',
+				// Checked by Typescript - ts(1117)
+				'no-dupe-keys': 'off',
+				// Checked by Typescript - ts(7027)
+				'no-unreachable': 'off',
+				// Checked by Typescript - ts(2367)
+				'valid-typeof': 'off',
+				// Checked by Typescript - ts(2588)
+				'no-const-assign': 'off',
+				// Checked by Typescript - ts(2588)
+				'no-new-symbol': 'off',
+				// Checked by Typescript - ts(2376)
+				'no-this-before-super': 'off',
+				// This is checked by Typescript using the option `strictNullChecks`.
+				'no-undef': 'off',
+				// This is already checked by Typescript.
+				'no-dupe-class-members': 'off',
+				// This is already checked by Typescript.
+				'no-redeclare': 'off',
+			},
 		},
-	  ],
+	],
 };
