@@ -48,6 +48,7 @@ module.exports = {
 		'@typescript-eslint/no-unused-expressions': 'error',
 		'@typescript-eslint/no-use-before-define': 'error',
 		'@typescript-eslint/no-var-requires': 'error',
+		'@typescript-eslint/no-shadow': 'error',
 		'@typescript-eslint/prefer-namespace-keyword': 'error',
 	},
 	overrides: [
@@ -60,6 +61,7 @@ module.exports = {
 				'no-unused-vars': 'off',
 				'no-unused-expressions': 'off',
 				'no-use-before-define': 'off',
+				'no-shadow': 'off',
 
 				//Checked by Typescript - ts(2378)
 				'getter-return': 'off',
