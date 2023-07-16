@@ -12,7 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
-        node-version-file: .nvmrc
-        cache: 'npm'
+        with:
+          node-version-file: .nvmrc
+          cache: 'npm'
       - run: npm ci
       - run: npm test
