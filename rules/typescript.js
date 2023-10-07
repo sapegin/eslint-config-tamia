@@ -28,10 +28,10 @@ module.exports = {
 				format: ['PascalCase', 'UPPER_CASE'],
 			},
 			{
-				// Unused function argument
-				selector: 'variableLike',
-				filter: '^_$',
-				format: null,
+				selector: 'parameter',
+				format: ['camelCase'],
+				// Allow _ for unused function arguments
+				leadingUnderscore: 'allow',
 			},
 		],
 		'@typescript-eslint/explicit-member-accessibility': 'error',
