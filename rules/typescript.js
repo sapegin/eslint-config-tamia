@@ -62,6 +62,9 @@ module.exports = {
 				'no-use-before-define': 'off',
 				'no-shadow': 'off',
 
+				// Conflicts with TypeScript check for unreachable code
+				'consistent-return': 'off',
+
 				//Checked by Typescript - ts(2378)
 				'getter-return': 'off',
 				// Checked by Typescript - ts(2300)
