@@ -52,7 +52,7 @@ module.exports = {
 	},
 	overrides: [
 		{
-			files: ['*.ts', '*.tsx'],
+			files: ['*.ts', '*.tsx', '*.astro'],
 			rules: {
 				// Disable generic rules that conflict with TypeScript
 				camelcase: 'off',
