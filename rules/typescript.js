@@ -9,11 +9,9 @@ module.exports = {
 			'error',
 			{
 				selector: 'default',
-				format: ['camelCase'],
-			},
-			{
-				selector: 'variableLike',
 				format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+				// HACK: allow importing Lodash as `_`
+				leadingUnderscore: 'allow',
 			},
 			{
 				selector: 'property',
