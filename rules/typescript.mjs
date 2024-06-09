@@ -1,6 +1,9 @@
-module.exports = {
-	parser: '@typescript-eslint/parser',
-	plugins: ['@typescript-eslint'],
+import typeScriptPlugin from '@typescript-eslint';
+import typeScriptParser from '@typescript-eslint/parser';
+
+export default [{
+	parser: typeScriptParser,
+	plugins: [typeScriptPlugin],
 	rules: {
 		'@typescript-eslint/adjacent-overload-signatures': 'error',
 		'@typescript-eslint/array-type': 'error',
@@ -88,4 +91,4 @@ module.exports = {
 			},
 		},
 	],
-};
+}];

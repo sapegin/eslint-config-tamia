@@ -1,4 +1,4 @@
-module.exports = {
+export default [{
 	env: {
 		node: true,
 	},
@@ -6,4 +6,4 @@ module.exports = {
 		// Disallow string concatenation with __dirname and __filename
 		'no-path-concat': 2,
 	},
-};
+}];

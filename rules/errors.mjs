@@ -1,4 +1,4 @@
-module.exports = {
+export default [{
 	// Most of possible error rules are inherited from eslint:recommended preset
 	rules: {
 		// Enforce “for” loop update clause moving the counter
@@ -7,4 +7,4 @@ module.exports = {
 		// Disallow use of Object.prototypes builtins directly
 		'no-prototype-builtins': 2,
 	},
-};
+}];

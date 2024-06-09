@@ -1,4 +1,4 @@
-module.exports = {
+export default [{
 	rules: {
 		// Enforces return statements in callbacks of array’s methods
 		'array-callback-return': 'error',
@@ -112,4 +112,4 @@ module.exports = {
 			},
 		],
 	},
-};
+}];

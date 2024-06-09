@@ -1,4 +1,4 @@
-module.exports = {
+export default [{
 	rules: {
 		// Disallow shadowing of names such as arguments
 		'no-shadow-restricted-names': 2,
@@ -9,4 +9,4 @@ module.exports = {
 		// Disallow variable declarations from shadowing variables declared in the outer scope
 		'no-shadow': 1,
 	},
-};
+}];

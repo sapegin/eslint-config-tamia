@@ -1,5 +1,7 @@
-module.exports = {
-	plugins: ['react'],
+import react from 'eslint-plugin-react';
+
+export default [{
+	plugins: [react],
 	parserOptions: {
 		ecmaFeatures: {
 			jsx: true,
@@ -183,4 +185,4 @@ module.exports = {
 		// Prevents common typos
 		'react/no-typos': 2,
 	},
-};
+}];

@@ -1,4 +1,4 @@
-module.exports = {
+export default [{
 	// Code style should be handled by Prettier
 	rules: {
 		// Require camel case names
@@ -35,4 +35,4 @@ module.exports = {
 		// Disallow mixed spaces and tabs (disabled because of Prettier)
 		"no-mixed-spaces-and-tabs": 0
 	}
-};
+}];

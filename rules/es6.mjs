@@ -1,4 +1,4 @@
-module.exports = {
+export default [{
 	env: {
 		es6: true,
 	},
@@ -27,4 +27,4 @@ module.exports = {
 		// Disallow renaming import, export, and destructured assignments to the same name
 		'no-useless-rename': 2,
 	},
-};
+}];

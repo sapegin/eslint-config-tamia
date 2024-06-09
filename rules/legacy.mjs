@@ -1,4 +1,4 @@
-module.exports = {
+export default [{
 	rules: {
 		// Specify the maximum depth that blocks can be nested
 		'max-depth': [0, 5],
@@ -11,4 +11,4 @@ module.exports = {
 		// Disallow use of unary operators, ++ and --
 		'no-plusplus': 0,
 	},
-};
+}];
