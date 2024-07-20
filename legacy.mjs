@@ -1,25 +1,26 @@
-import js from "@eslint/js";
-import bestPractices from './rules/best-practices';
-import errors from './rules/errors';
-import legacy from './rules/legacy';
-import node from './rules/node';
-import style from './rules/style';
-import variables from './rules/variables';
+import js from '@eslint/js';
+import globals from 'globals';
+import bestPractices from './rules/best-practices.mjs';
+import errors from './rules/errors.mjs';
+import legacy from './rules/legacy.mjs';
+import node from './rules/node.mjs';
+import style from './rules/style.mjs';
+import variables from './rules/variables.mjs';
 
+/** @type { import("eslint").Linter.FlatConfig[] } */
 export default [
-  js.configs.recommended,
-  bestPractices,
-  errors,
-  legacy,
-  node,
-  style,
-  variables,
-  {
-    env: {
-      browser: true,
-      jest: true,
-    },
-    globals: {},
-    rules: {},
-  }
+	js.configs.recommended,
+	...bestPractices,
+	...errors,
+	...legacy,
+	...node,
+	...style,
+	...variables,
+	{
+		languageOptions: {
+			globals: {
+				...globals.browser,
+			},
+		},
+	},
 ];

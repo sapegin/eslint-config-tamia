@@ -1,9 +1,10 @@
-import typescript from './rules/typescript';
-import react from './rules/react';
+import typescript from './rules/typescript.mjs';
+import react from './rules/react.mjs';
 
+/** @type { import("eslint").Linter.FlatConfig[] } */
 export default [
-	typescript,
-	react,
+	...typescript,
+	...react,
 	{
 		rules: {
 			// Disable generic rules that conflict with TypeScript

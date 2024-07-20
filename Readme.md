@@ -16,54 +16,50 @@ Our default export contains all of our ESLint rules, including EcmaScript 6+. It
 
 `npm install --save-dev eslint-config-tamia eslint`
 
-`.eslintrc`:
+`eslint.config.mjs`:
 
-```json
-{
-  "extends": "tamia"
-}
+```js
+import tamia from 'eslint-config-tamia';
+export default [...tamia];
 ```
 
 ### eslint-config-tamia/react
 
-Lints ES6+ and React. Requires `eslint` and `eslint-plugin-react`.
+Lints ES6+ and React. Uses `eslint-plugin-react`.
 
-`npm install --save-dev eslint-config-tamia eslint-plugin-react eslint`
+`npm install --save-dev eslint-config-tamia eslint`
 
-`.eslintrc`:
+`eslint.config.mjs`:
 
-```json
-{
-  "extends": "tamia/react"
-}
+```js
+import tamiaReact from 'eslint-config-tamia/react';
+export default [...tamiaReact];
 ```
 
 ### eslint-config-tamia/typescript
 
-Lints TypeScript. Requires `eslint` and `@typescript-eslint/eslint-plugin`.
+Lints TypeScript. Uses `typescript-eslint`.
 
-`npm install --save-dev eslint-config-tamia @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint`
+`npm install --save-dev eslint-config-tamia eslint`
 
-`.eslintrc`:
+`eslint.config.mjs`:
 
-```json
-{
-  "extends": "tamia/typescript"
-}
+```js
+import tamiaTypeScript from 'eslint-config-tamia/typescript';
+export default [...tamiaTypeScript];
 ```
 
 ### eslint-config-tamia/typescript-react
 
-Lints TypeScript and React. Requires `eslint`, `@typescript-eslint/eslint-plugin` and `eslint-plugin-react`.
+Lints TypeScript and React. Uses `typescript-eslint` and `eslint-plugin-react`.
 
-`npm install --save-dev eslint-config-tamia @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react eslint`
+`npm install --save-dev eslint-config-tamia eslint`
 
-`.eslintrc`:
+`eslint.config.mjs`:
 
-```json
-{
-  "extends": "tamia/typescript-react"
-}
+```js
+import tamiaTypeScriptReact from 'eslint-config-tamia/typescript-react';
+export default [...tamiaTypeScriptReact];
 ```
 
 ### eslint-config-tamia/legacy
@@ -72,12 +68,11 @@ Lints ES5 and below. Only requires `eslint`.
 
 `npm install --save-dev eslint-config-tamia eslint`
 
-`.eslintrc`:
+`eslint.config.mjs`:
 
-```json
-{
-  "extends": "tamia/legacy"
-}
+```js
+import tamiaTypeScript from 'eslint-config-tamia/typescript';
+export default [...tamiaTypeScript];
 ```
 
 ## Code style at a glance
@@ -98,11 +93,11 @@ Example:
 
 ```javascript
 function eatFood(food) {
-	if (!food.length) {
-		return ['No food'];
-	}
+  if (!food.length) {
+    return ['No food'];
+  }
 
-	return food.map(dish => `No ${dish.toLowerCase()}`);
+  return food.map(dish => `No ${dish.toLowerCase()}`);
 }
 
 const food = ['Pizza', 'Buger', 'Coffee'];

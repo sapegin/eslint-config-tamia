@@ -1,6 +1,9 @@
-export default [{
-	rules: {
-		// Babel inserts `'use strict';` for us
-		strict: [2, 'never'],
+/** @type { import("eslint").Linter.FlatConfig[] } */
+export default [
+	{
+		rules: {
+			// Strict is implied in ECMAScript modules
+			strict: [2, 'never'],
+		},
 	},
-}];
+];

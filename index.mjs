@@ -1,5 +1,6 @@
-import legacy from './legacy';
-import es6 from './rules/es6';
-import strict from './rules/strict';
+import legacy from './legacy.mjs';
+import es6 from './rules/es6.mjs';
+import strict from './rules/strict.mjs';
 
-export default [legacy, es6, strict];
+/** @type { import("eslint").Linter.FlatConfig[] } */
+export default [...legacy, ...es6, ...strict];
