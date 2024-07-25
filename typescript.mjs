@@ -1,7 +1,6 @@
-import legacy from './rules/legacy.mjs';
-import es6 from './rules/es6.mjs';
-import strict from './rules/strict.mjs';
+import javascript from './rules/javascript.mjs';
 import typescript from './rules/typescript.mjs';
+import unicorn from './rules/unicorn.mjs';
 
 /** @type { import("eslint").Linter.FlatConfig[] } */
-export default [...legacy, ...es6, ...strict, ...typescript];
+export default [...javascript, ...typescript, ...unicorn];

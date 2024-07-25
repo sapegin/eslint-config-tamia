@@ -12,9 +12,11 @@ We export three ESLint configurations:
 
 ### eslint-config-tamia
 
-Our default export contains all of our ESLint rules, including EcmaScript 6+. It requires `eslint`.
+Base set of rules for JavaScript. Includes:
 
-`npm install --save-dev eslint-config-tamia eslint`
+- [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
+
+`npm install --save-dev eslint eslint-config-tamia`
 
 `eslint.config.mjs`:
 
@@ -25,9 +27,12 @@ export default [...tamia];
 
 ### eslint-config-tamia/react
 
-Lints ES6+ and React. Uses `eslint-plugin-react`.
+Lints ES6+ and React. Includes:
 
-`npm install --save-dev eslint-config-tamia eslint`
+- [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react)
+- [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
+
+`npm install --save-dev eslint eslint-config-tamia`
 
 `eslint.config.mjs`:
 
@@ -38,9 +43,12 @@ export default [...tamiaReact];
 
 ### eslint-config-tamia/typescript
 
-Lints TypeScript. Uses `typescript-eslint`.
+Lints TypeScript. Includes:
 
-`npm install --save-dev eslint-config-tamia eslint`
+- [typescript-eslint](https://typescript-eslint.io/)
+- [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
+
+`npm install --save-dev eslint eslint-config-tamia`
 
 `eslint.config.mjs`:
 
@@ -51,28 +59,19 @@ export default [...tamiaTypeScript];
 
 ### eslint-config-tamia/typescript-react
 
-Lints TypeScript and React. Uses `typescript-eslint` and `eslint-plugin-react`.
+Lints TypeScript and React. Includes:
 
-`npm install --save-dev eslint-config-tamia eslint`
+- [typescript-eslint](https://typescript-eslint.io/)
+- [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react)
+- [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
+
+`npm install --save-dev eslint eslint-config-tamia`
 
 `eslint.config.mjs`:
 
 ```js
 import tamiaTypeScriptReact from 'eslint-config-tamia/typescript-react';
 export default [...tamiaTypeScriptReact];
-```
-
-### eslint-config-tamia/legacy
-
-Lints ES5 and below. Only requires `eslint`.
-
-`npm install --save-dev eslint-config-tamia eslint`
-
-`eslint.config.mjs`:
-
-```js
-import tamiaTypeScript from 'eslint-config-tamia/typescript';
-export default [...tamiaTypeScript];
 ```
 
 ## Code style at a glance

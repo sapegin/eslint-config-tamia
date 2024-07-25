@@ -2,9 +2,9 @@ import tseslint from 'typescript-eslint';
 
 /** @type { import("eslint").Linter.FlatConfig[] } */
 export default [
-	tseslint.configs.base,
+	...tseslint.configs.recommended,
 	{
-		files: ['*.ts', '*.tsx', '*.astro'],
+		files: ['**/*.{ts,tsx,astro}'],
 		rules: {
 			// Disable generic rules that conflict with TypeScript
 			camelcase: 'off',
@@ -13,36 +13,16 @@ export default [
 			'no-unused-expressions': 'off',
 			'no-use-before-define': 'off',
 			'no-shadow': 'off',
-
 			// Conflicts with TypeScript check for unreachable code
 			'consistent-return': 'off',
-
-			//Checked by TypeScript - ts(2378)
-			'getter-return': 'off',
-			// Checked by TypeScript - ts(2300)
-			'no-dupe-args': 'off',
-			// Checked by TypeScript - ts(1117)
-			'no-dupe-keys': 'off',
-			// Checked by TypeScript - ts(7027)
-			'no-unreachable': 'off',
 			// Checked by TypeScript - ts(2367)
 			'valid-typeof': 'off',
-			// Checked by TypeScript - ts(2588)
-			'no-const-assign': 'off',
-			// Checked by TypeScript - ts(2588)
-			'no-new-symbol': 'off',
-			// Checked by TypeScript - ts(2376)
-			'no-this-before-super': 'off',
-			// This is checked by TypeScript using the option `strictNullChecks`.
-			'no-undef': 'off',
-			// This is already checked by TypeScript.
-			'no-dupe-class-members': 'off',
-			// This is already checked by TypeScript.
-			'no-redeclare': 'off',
 
+			// Require that function overload signatures be consecutive
 			'@typescript-eslint/adjacent-overload-signatures': 'error',
+			// Require consistently using either T[] or Array<T> for arrays
 			'@typescript-eslint/array-type': 'error',
-			'@typescript-eslint/ban-types': 'error',
+			// Enforce naming conventions for everything across a codebase
 			'@typescript-eslint/naming-convention': [
 				'error',
 				{
@@ -70,21 +50,20 @@ export default [
 					leadingUnderscore: 'allow',
 				},
 			],
+			// Require explicit accessibility modifiers on class properties and methods
 			'@typescript-eslint/explicit-member-accessibility': 'error',
+			// Enforce consistent usage of type assertions
 			'@typescript-eslint/consistent-type-assertions': 'error',
-			'@typescript-eslint/no-array-constructor': 'error',
-			'@typescript-eslint/no-empty-interface': 'error',
+			// Disallow explicit type declarations for variables or parameters
+			// initialized to a number, string, or boolean
 			'@typescript-eslint/no-inferrable-types': 'error',
-			'@typescript-eslint/no-misused-new': 'error',
-			'@typescript-eslint/no-namespace': 'error',
+			// Disallow non-null assertions using the ! postfix operator
 			'@typescript-eslint/no-non-null-assertion': 'error',
-			'@typescript-eslint/triple-slash-reference': 'error',
-			'@typescript-eslint/no-unused-vars': 'warn',
+			// Disallow unused expressions
 			'@typescript-eslint/no-unused-expressions': 'error',
-			'@typescript-eslint/no-use-before-define': 'error',
-			'@typescript-eslint/no-var-requires': 'error',
+			// Disallow variable declarations from shadowing variables declared
+			// in the outer scope
 			'@typescript-eslint/no-shadow': 'error',
-			'@typescript-eslint/prefer-namespace-keyword': 'error',
 		},
 	},
 ];

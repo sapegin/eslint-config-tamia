@@ -1,13 +1,21 @@
+import globals from 'globals';
+import js from '@eslint/js';
+
 /** @type { import("eslint").Linter.FlatConfig[] } */
 export default [
+	js.configs.recommended,
 	{
+		files: ['**/*.{js,mjs,cjs,jsx,astro}'],
+		languageOptions: {
+			globals: {
+				...globals.es2024,
+				...globals.browser,
+				...globals.node,
+			},
+		},
 		rules: {
 			// Enforces return statements in callbacks of array’s methods
 			'array-callback-return': 'error',
-			// Treat var statements as if they were block scoped
-			'block-scoped-var': 'error',
-			// Require return statements to either always or never specify values
-			'consistent-return': 'error',
 			// Require curly braces for all control statements
 			curly: ['error', 'all'],
 			// Encourages use of dot notation whenever possible
@@ -21,31 +29,12 @@ export default [
 			eqeqeq: ['error', 'allow-null'],
 			// Disallow the use of alert, confirm, and prompt
 			'no-alert': 'error',
-			// Disallow using an async function as a Promise executor
-			'no-async-promise-executor': 'error',
-			// Disallow use of arguments.caller or arguments.callee
-			'no-caller': 'error',
-			// Disallow else after a return in an if
-			'no-else-return': 'off',
-			// Disallow use of eval()
-			'no-eval': 'error',
 			// Disallow adding to native types
 			'no-extend-native': 'error',
 			// Disallow unnecessary function binding
 			'no-extra-bind': 'error',
-			// Disallow the use of leading or trailing decimal points in numeric literals
-			'no-floating-decimal': 'error',
 			// Disallow the type conversions with shorter notations
-			'no-implicit-coercion': [
-				'error',
-				{
-					boolean: false,
-					number: true,
-					string: true,
-				},
-			],
-			// Disallow use of eval()-like methods
-			'no-implied-eval': 'error',
+			'no-implicit-coercion': 'error',
 			// Disallow usage of __iterator__ property
 			'no-iterator': 'error',
 			// Disallow use of labels for anything other then loops and switches
@@ -60,12 +49,8 @@ export default [
 			'no-lone-blocks': 'error',
 			// Disallow creation of functions within loops
 			'no-loop-func': 'error',
-			// Disallow characters which are made with multiple code points in character class syntax
-			'no-misleading-character-class': 'error',
 			// Disallow use of multiline strings
 			'no-multi-str': 'error',
-			// Disallow use of new operator for Function object
-			'no-new-func': 'error',
 			// Disallows creating new instances of String, Number, and Boolean
 			'no-new-wrappers': 'error',
 			// Disallow use of octal escape sequences in string literals, such as var foo = 'Copyright \251';
@@ -88,8 +73,6 @@ export default [
 			'no-unused-expressions': 'error',
 			// Disallow unnecessary .call() and .apply()
 			'no-useless-call': 'error',
-			// Disallow unnecessary catch clauses
-			'no-useless-catch': 'error',
 			// Disallow unnecessary concatenation of literals or template literals
 			'no-useless-concat': 'error',
 			// Disallow redundant return statements
@@ -101,8 +84,6 @@ export default [
 					allowAsStatement: true,
 				},
 			],
-			// Disallow use of the with statement
-			'no-with': 'error',
 			// Disallow async functions which have no await expression
 			'require-await': 'error',
 			// Require or disallow Yoda conditions
@@ -113,6 +94,63 @@ export default [
 					exceptRange: true,
 				},
 			],
+			// Disallow duplicate imports
+			'no-duplicate-imports': 'error',
+			// Disallow unnecessary constructor
+			'no-useless-constructor': 'error',
+			// Disallow unnecessary computed property keys on objects
+			'no-useless-computed-key': 'error',
+			// Require let or const instead of var
+			'no-var': 'error',
+			// Require method and property shorthand syntax for object literals
+			'object-shorthand': ['error', 'always'],
+			// Suggest using of const declaration for variables that are never modified after declared
+			'prefer-const': 'error',
+			// Suggest using the spread operator instead of .apply()
+			'prefer-spread': 'error',
+			// Suggest using the rest parameters instead of arguments
+			'prefer-rest-params': 'error',
+			// Disallow renaming import, export, and destructured assignments to the same name
+			'no-useless-rename': 'error',
+			// Limits the number of parameters that can be used in the function declaration
+			'max-params': [0, 5],
+			// Strict is implied in ECMAScript modules
+			strict: ['error', 'never'],
+			// Require camel case names
+			camelcase: [
+				'error',
+				{
+					properties: 'never',
+				},
+			],
+			// Disallow mixed 'LF' and 'CRLF' as linebreaks
+			'linebreak-style': ['error', 'unix'],
+			// Require a capital letter for constructors
+			'new-cap': [
+				'error',
+				{
+					newIsCap: true,
+					capIsNew: false,
+				},
+			],
+			// Disallow use of the Array constructor
+			'no-array-constructor': 'error',
+			// Disallow if as the only statement in an else block
+			'no-lonely-if': 'error',
+			// Disallow use of the Object constructor
+			'no-new-object': 'error',
+			// Disallow Use of Chained Assignment Expressions
+			'no-multi-assign': 'error',
+			// Disallow the use of Boolean literals in conditional expressions
+			'no-unneeded-ternary': 'error',
+			// Disallow use of undefined when initializing variables
+			'no-undef-init': 'error',
+			// Disallow variable declarations from shadowing variables declared in the outer scope
+			'no-shadow': 'warn',
+			// Allow just one var statement per variable
+			'one-var': ['error', 'never'],
+			// Disallow the Unicode Byte Order Mark (BOM)
+			'unicode-bom': ['error', 'never'],
 		},
 	},
 ];

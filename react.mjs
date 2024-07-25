@@ -1,22 +1,6 @@
-import legacy from './rules/legacy.mjs';
-import es6 from './rules/es6.mjs';
-import strict from './rules/strict.mjs';
+import javascript from './rules/javascript.mjs';
 import react from './rules/react.mjs';
+import unicorn from './rules/unicorn.mjs';
 
 /** @type { import("eslint").Linter.FlatConfig[] } */
-export default [
-	...legacy,
-	...es6,
-	...strict,
-	...react,
-	{
-		languageOptions: {
-			parserOptions: {
-				ecmaVersion: 2024,
-				sourceType: 'module',
-				requireConfigFile: false,
-			},
-		},
-		rules: {},
-	},
-];
+export default [...javascript, ...react, ...unicorn];

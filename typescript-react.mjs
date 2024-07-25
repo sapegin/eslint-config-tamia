@@ -1,14 +1,7 @@
+import javascript from './rules/javascript.mjs';
 import typescript from './rules/typescript.mjs';
 import react from './rules/react.mjs';
+import unicorn from './rules/unicorn.mjs';
 
 /** @type { import("eslint").Linter.FlatConfig[] } */
-export default [
-	...typescript,
-	...react,
-	{
-		rules: {
-			// Disable generic rules that conflict with TypeScript
-			'react/prop-types': 'off',
-		},
-	},
-];
+export default [...javascript, ...typescript, ...react, ...unicorn];
