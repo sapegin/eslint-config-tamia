@@ -5,7 +5,7 @@ import js from '@eslint/js';
 export default [
 	js.configs.recommended,
 	{
-		files: ['**/*.{js,mjs,cjs,jsx,astro}'],
+		files: ['**/*.{js,mjs,cjs,jsx,ts,tsx,astro}'],
 		languageOptions: {
 			globals: {
 				...globals.es2024,
