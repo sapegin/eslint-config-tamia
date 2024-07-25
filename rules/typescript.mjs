@@ -4,7 +4,42 @@ import tseslint from 'typescript-eslint';
 export default [
 	tseslint.configs.base,
 	{
+		files: ['*.ts', '*.tsx', '*.astro'],
 		rules: {
+			// Disable generic rules that conflict with TypeScript
+			camelcase: 'off',
+			'no-array-constructor': 'off',
+			'no-unused-vars': 'off',
+			'no-unused-expressions': 'off',
+			'no-use-before-define': 'off',
+			'no-shadow': 'off',
+
+			// Conflicts with TypeScript check for unreachable code
+			'consistent-return': 'off',
+
+			//Checked by TypeScript - ts(2378)
+			'getter-return': 'off',
+			// Checked by TypeScript - ts(2300)
+			'no-dupe-args': 'off',
+			// Checked by TypeScript - ts(1117)
+			'no-dupe-keys': 'off',
+			// Checked by TypeScript - ts(7027)
+			'no-unreachable': 'off',
+			// Checked by TypeScript - ts(2367)
+			'valid-typeof': 'off',
+			// Checked by TypeScript - ts(2588)
+			'no-const-assign': 'off',
+			// Checked by TypeScript - ts(2588)
+			'no-new-symbol': 'off',
+			// Checked by TypeScript - ts(2376)
+			'no-this-before-super': 'off',
+			// This is checked by TypeScript using the option `strictNullChecks`.
+			'no-undef': 'off',
+			// This is already checked by TypeScript.
+			'no-dupe-class-members': 'off',
+			// This is already checked by TypeScript.
+			'no-redeclare': 'off',
+
 			'@typescript-eslint/adjacent-overload-signatures': 'error',
 			'@typescript-eslint/array-type': 'error',
 			'@typescript-eslint/ban-types': 'error',
@@ -51,45 +86,5 @@ export default [
 			'@typescript-eslint/no-shadow': 'error',
 			'@typescript-eslint/prefer-namespace-keyword': 'error',
 		},
-		overrides: [
-			{
-				files: ['*.ts', '*.tsx', '*.astro'],
-				rules: {
-					// Disable generic rules that conflict with TypeScript
-					camelcase: 'off',
-					'no-array-constructor': 'off',
-					'no-unused-vars': 'off',
-					'no-unused-expressions': 'off',
-					'no-use-before-define': 'off',
-					'no-shadow': 'off',
-
-					// Conflicts with TypeScript check for unreachable code
-					'consistent-return': 'off',
-
-					//Checked by TypeScript - ts(2378)
-					'getter-return': 'off',
-					// Checked by TypeScript - ts(2300)
-					'no-dupe-args': 'off',
-					// Checked by TypeScript - ts(1117)
-					'no-dupe-keys': 'off',
-					// Checked by TypeScript - ts(7027)
-					'no-unreachable': 'off',
-					// Checked by TypeScript - ts(2367)
-					'valid-typeof': 'off',
-					// Checked by TypeScript - ts(2588)
-					'no-const-assign': 'off',
-					// Checked by TypeScript - ts(2588)
-					'no-new-symbol': 'off',
-					// Checked by TypeScript - ts(2376)
-					'no-this-before-super': 'off',
-					// This is checked by TypeScript using the option `strictNullChecks`.
-					'no-undef': 'off',
-					// This is already checked by TypeScript.
-					'no-dupe-class-members': 'off',
-					// This is already checked by TypeScript.
-					'no-redeclare': 'off',
-				},
-			},
-		],
 	},
 ];
