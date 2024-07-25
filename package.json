@@ -2,7 +2,12 @@
 	"name": "eslint-config-tamia",
 	"description": "Tâmia ESLint config",
 	"version": "0.0.0-development",
+	"type": "module",
 	"main": "index.js",
+	"files": [
+		"rules",
+		"*.mjs"
+	],
 	"scripts": {
 		"pretest": "npm run lint",
 		"test": "npm run test:vitest",
@@ -14,10 +19,6 @@
 		"type": "git",
 		"url": "https://github.com/tamiadev/eslint-config-tamia"
 	},
-	"files": [
-		"rules",
-		"*.mjs"
-	],
 	"keywords": [
 		"eslintconfig",
 		"tamia"
