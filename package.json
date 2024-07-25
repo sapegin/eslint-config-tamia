@@ -16,7 +16,7 @@
 	},
 	"files": [
 		"rules",
-		"*.js"
+		"*.mjs"
 	],
 	"keywords": [
 		"eslintconfig",
