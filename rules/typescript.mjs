@@ -33,7 +33,9 @@ export default [
 				},
 				{
 					selector: 'property',
-					format: undefined,
+					// Null is a requirement
+					// eslint-disable-next-line unicorn/no-null
+					format: null,
 				},
 				{
 					selector: 'typeLike',
