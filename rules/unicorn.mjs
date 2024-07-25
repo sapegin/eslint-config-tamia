@@ -6,6 +6,8 @@ export default [
 		rules: {
 			// Reduces readability
 			'unicorn/prefer-ternary': 'off',
+			// Opinionated
+			'unicorn/filename-case': 'off',
 		},
 	},
 ];
