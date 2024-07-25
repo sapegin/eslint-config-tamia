@@ -3,7 +3,16 @@
 	"description": "Tâmia ESLint config",
 	"version": "0.0.0-development",
 	"type": "module",
-	"main": "index.js",
+	"main": "index.mjs",
+	"exports": {
+		".": {
+			"import": "./index.mjs"
+		},
+		"./legacy": "./legacy.mjs",
+		"./react": "./react.mjs",
+		"./typescript-react": "./typescript.mjs-react",
+		"./typescript": "./typescript.mjs"
+	},
 	"files": [
 		"rules",
 		"*.mjs"
