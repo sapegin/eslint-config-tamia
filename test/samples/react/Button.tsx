@@ -1,17 +1,18 @@
-import React, { type ReactNode } from 'react';
+import { useState } from 'react';
 
 const className = 'bg-salmon text-white';
 
 /**
  * Button that changes label on every click.
  */
-export function RandomButton({ children }: { children: ReactNode }) {
+export function RandomButton() {
+	const [clicked, setClicked] = useState(false);
 	const handleClick = () => {
-		console.log('CLICK!');
+		setClicked(true);
 	};
 	return (
 		<button className={className} onClick={handleClick}>
-			{children}
+			{clicked ? 'Don’t click again' : 'Click me!'}
 		</button>
 	);
 }
