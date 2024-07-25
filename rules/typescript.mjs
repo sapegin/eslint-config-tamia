@@ -33,7 +33,7 @@ export default [
 				},
 				{
 					selector: 'property',
-					format: null,
+					format: undefined,
 				},
 				{
 					selector: 'typeLike',

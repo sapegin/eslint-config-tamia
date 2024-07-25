@@ -1,17 +1,18 @@
 import { test, expect } from 'vitest';
-import fs from 'fs';
-import path from 'path';
+import fs from 'node:fs';
+import path from 'node:path';
 
-fs.readdirSync(path.resolve(__dirname, '../rules')).forEach((name) => {
-	if (!name.match(/\.mjs$/)) {
-		return;
+for (const name of fs.readdirSync(path.resolve('./rules'))) {
+	if (!/\.mjs$/.test(name)) {
+		continue;
 	}
 
 	test(`does not throw when requiring ${name}`, () => {
-		const func = async () => {
+		// eslint-disable-next-line unicorn/consistent-function-scoping
+		const function_ = async () => {
 			await import(`../rules/${name}`);
 		};
 
-		expect(func).not.toThrow();
+		expect(function_).not.toThrow();
 	});
-});
+}
