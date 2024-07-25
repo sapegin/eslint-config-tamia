@@ -5,9 +5,9 @@ import react from 'eslint-plugin-react';
 export default [
 	{
 		files: ['**/*.{js,jsx,mjs,cjs,tsx}'],
-		...reactPlugin.configs.flat.recommended,
+		...react.configs.flat.recommended,
 		languageOptions: {
-			...reactPlugin.configs.flat.recommended.languageOptions,
+			...react.configs.flat.recommended.languageOptions,
 			globals: {
 				...globals.es2024,
 				...globals.browser,
