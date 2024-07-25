@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-/* eslint-disable no-console */
+ 
 
-var argv = require('optimist')
+const argv = require('optimist')
 	.usage('Usage: $0 [--rules full] [--lang en] [--text] filename')
 	.boolean('text')
 	.default('rules', 'full')
@@ -21,11 +21,11 @@ var argv = require('optimist')
 	.describe('lang', 'Text language.')
 	.describe('text', 'Strip HTML tags.').argv;
 
-var richtypo = require('../richtypo.js');
-var fs = require('fs');
+const richtypo = require('../richtypo.js');
+const fs = require('fs');
 
-var lang = argv.lang;
-var file = argv._[0];
+const lang = argv.lang;
+const file = argv._[0];
 
 if (!fs.existsSync(file)) {
 	console.log('File "' + file + '" not found.');
@@ -33,7 +33,7 @@ if (!fs.existsSync(file)) {
 }
 
 // Read UTF-8 file and remove BOM
-var text = fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, '');
+let text = fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, '');
 
 text = richtypo[argv.rules](text, lang);
 
