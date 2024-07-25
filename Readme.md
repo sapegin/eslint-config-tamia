@@ -77,11 +77,11 @@ export default [...tamiaTypeScript];
 
 ## Code style at a glance
 
-- Tab indentation.
+- ~~Tab indentation.~~
 - Single-quotes.
 - Semicolons.
 - Declare variables just before their first usage.
-- Multiple variable statements.
+- Multiple variable statements over multiple variable in a single statement.
 - Make `const`, not `var`.
 - Use `===` and `!==` over `==` and `!=`.
 - Return early.
@@ -93,14 +93,14 @@ Example:
 
 ```javascript
 function eatFood(food) {
-  if (!food.length) {
+  if (food.length === 0) {
     return ['No food'];
   }
 
   return food.map(dish => `No ${dish.toLowerCase()}`);
 }
 
-const food = ['Pizza', 'Buger', 'Coffee'];
+const food = ['Pizza', 'Burger', 'Coffee'];
 console.log(eatFood(food));
 ```
 
