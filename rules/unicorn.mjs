@@ -8,6 +8,8 @@ export default [
 			'unicorn/prefer-ternary': 'off',
 			// Opinionated
 			'unicorn/filename-case': 'off',
+			// Opinionated, sometimes you need it
+			'unicorn/no-array-reduce': 'off',
 		},
 	},
 ];
