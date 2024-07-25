@@ -6,7 +6,7 @@ export default [
 		rules: {
 			// Reduces readability
 			'unicorn/prefer-ternary': 'off',
-			// Opinionated
+			// Opinionated, doesn't allow Button.tsx
 			'unicorn/filename-case': 'off',
 			// Opinionated, sometimes you need it
 			'unicorn/no-array-reduce': 'off',
