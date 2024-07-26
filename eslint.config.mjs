@@ -1,3 +1,3 @@
-import tamia from './index.mjs';
+import typescriptReact from './typescript-react.mjs';
 
-export default [...tamia];
+export default [...typescriptReact];
