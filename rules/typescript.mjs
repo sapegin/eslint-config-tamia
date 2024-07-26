@@ -1,12 +1,36 @@
 import tseslint from 'typescript-eslint';
 
+// HACK: Recommended config applies many rules to all files which
+// produces false positives, for examples, in CommonJS files
+
+function findConfig(name) {
+	return tseslint.configs.recommended.find((x) => x.name === name);
+}
+
+const baseConfig = findConfig('typescript-eslint/base');
+const eslintRecommendedConfig = findConfig(
+	'typescript-eslint/eslint-recommended'
+);
+const recommendedConfig = findConfig('typescript-eslint/recommended');
+
 /** @type { import("eslint").Linter.FlatConfig[] } */
 export default [
-	...tseslint.configs.recommended,
 	{
+		// Only apply to files with TypeScript
 		files: ['**/*.{ts,tsx,astro}'],
+
+		// Copy the basic options from the recommended config
+		languageOptions: baseConfig.languageOptions,
+		plugins: baseConfig.plugins,
+
 		rules: {
+			// Recommended rules
+			...eslintRecommendedConfig.rules,
+			...recommendedConfig.rules,
+
 			// Disable generic rules that conflict with TypeScript
+			// Most of them are disabled in typescript-eslint/eslint-recommended
+			// config, but here are a few more
 			camelcase: 'off',
 			'no-array-constructor': 'off',
 			'no-unused-vars': 'off',
@@ -17,6 +41,8 @@ export default [
 			'consistent-return': 'off',
 			// Checked by TypeScript - ts(2367)
 			'valid-typeof': 'off',
+
+			// Enable a few more rules
 
 			// Require that function overload signatures be consecutive
 			'@typescript-eslint/adjacent-overload-signatures': 'error',
