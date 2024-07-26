@@ -10,6 +10,9 @@ export default [
 			'unicorn/filename-case': 'off',
 			// Opinionated, sometimes you need it
 			'unicorn/no-array-reduce': 'off',
+			// Set.has() might be faster than Array.includes() but who cares
+			// if the array is short. Set is less readable
+			'unicorn/prefer-set-has': 'off',
 		},
 	},
 ];
