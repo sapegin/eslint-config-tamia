@@ -13,6 +13,8 @@ export default [
 			// Set.has() might be faster than Array.includes() but who cares
 			// if the array is short. Set is less readable
 			'unicorn/prefer-set-has': 'off',
+			// I don't need this
+			'unicorn/no-process-exit': 'off',
 		},
 	},
 ];
