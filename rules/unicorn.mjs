@@ -20,9 +20,10 @@ export default [
 				'warn',
 				{
 					replacements: {
-						db: false, // Database is too long and very common
+						db: false, // Database is long, and db is very common
 						arg: false,
 						args: false, // arguments_
+						env: false, // Environment is long, and env is very common
 						fn: false, // function_
 						func: {
 							fn: true,
