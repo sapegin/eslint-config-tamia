@@ -9,8 +9,8 @@
 			"import": "./index.mjs"
 		},
 		"./react": "./react.mjs",
-		"./typescript-react": "./typescript.mjs-react",
-		"./typescript": "./typescript.mjs"
+		"./typescript": "./typescript.mjs",
+		"./typescript-react": "./typescript-react.mjs"
 	},
 	"files": [
 		"rules",
