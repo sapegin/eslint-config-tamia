@@ -65,13 +65,18 @@ Lints TypeScript and React. Includes:
 - [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react)
 - [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
 
-`npm install --save-dev eslint eslint-config-tamia`
+`npm install --save-dev eslint eslint-config-tamia eslint-plugin-jsx-a11y`
 
 `eslint.config.mjs`:
 
 ```js
 import tamiaTypeScriptReact from 'eslint-config-tamia/typescript-react';
-export default [...tamiaTypeScriptReact];
+import jsxAccessibility from 'eslint-plugin-jsx-a11y';
+
+export default [
+  ...tamiaTypeScriptReact,
+  jsxAccessibility.flatConfigs.strict
+];
 ```
 
 ## Code style at a glance
