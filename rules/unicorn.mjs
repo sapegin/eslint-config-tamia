@@ -15,6 +15,29 @@ export default [
 			'unicorn/prefer-set-has': 'off',
 			// I don't need this
 			'unicorn/no-process-exit': 'off',
+			// Disable some abbreviation replacements
+			'unicorn/prevent-abbreviations': [
+				'warn',
+				{
+					replacements: {
+						db: false, // Database is too long and very common
+						arg: false,
+						args: false, // arguments_
+						fn: false, // function_
+						func: {
+							fn: true,
+							function: false,
+						},
+						prev: false, // Prev/next pair is good
+						prop: false, // Convention in React
+						props: false, // Convention in React
+						ref: false, // Convention in React
+						refs: false, // Convention in React
+						i: false, // Standard for `for` loops
+						j: false, // Standard for `for` loops
+					},
+				},
+			],
 		},
 	},
 ];
