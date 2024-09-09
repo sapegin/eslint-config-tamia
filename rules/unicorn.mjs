@@ -4,6 +4,25 @@ export default [
 	eslintPluginUnicorn.configs['flat/recommended'],
 	{
 		rules: {
+			// Enforce better typography in strings
+			'string-content': [
+				'error',
+				{
+					patterns: {
+						// Ellipsis: ... → …
+						'\\.\\.\\.': '…',
+						// Apostrophe: ' → ’
+						"'": '’',
+						// Fancy arrows: -> → →
+						'->': '→',
+						// Fancy quotes: " → “ or ”
+						'"': {
+							suggest: '“”',
+							message: 'Please use `“` or `”` instead of `"`.',
+						},
+					},
+				},
+			],
 			// Reduces readability
 			'unicorn/prefer-ternary': 'off',
 			// Opinionated, doesn't allow Button.tsx
