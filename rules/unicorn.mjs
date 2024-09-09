@@ -1,3 +1,5 @@
+/* eslint-disable unicorn/string-content */
+
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 
 export default [
@@ -14,11 +16,11 @@ export default [
 						// Ellipsis: ... → …
 						'\\.\\.\\.': '…',
 						// Apostrophe: ' → ’
-						"’": '’',
+						"'": '’',
 						// Fancy arrows: -> → →
-						'→': '→',
+						'->': '→',
 						// Fancy quotes: " → “ or ”
-						'“”': {
+						'"': {
 							suggest: '“”',
 							message: 'Please use `“` or `”` instead of `“”`.',
 						},
