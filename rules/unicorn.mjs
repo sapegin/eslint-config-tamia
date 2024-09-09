@@ -4,6 +4,8 @@ export default [
 	eslintPluginUnicorn.configs['flat/recommended'],
 	{
 		rules: {
+			// Prefer reading a JSON file as a buffer
+			'prefer-json-parse-buffer': 'error',
 			// Enforce better typography in strings
 			'string-content': [
 				'error',
