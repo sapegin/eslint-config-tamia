@@ -1,4 +1,4 @@
-/* eslint-disable unicorn/string-content */
+ 
 
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 
@@ -8,25 +8,6 @@ export default [
 		rules: {
 			// Prefer reading a JSON file as a buffer
 			'unicorn/prefer-json-parse-buffer': 'error',
-			// Enforce better typography in strings
-			'unicorn/string-content': [
-				'error',
-				{
-					patterns: {
-						// Ellipsis: ... → …
-						'\\.\\.\\.': '…',
-						// Apostrophe: ' → ’
-						"'": '’',
-						// Fancy arrows: -> → →
-						'->': '→',
-						// Fancy quotes: " → “ or ”
-						'"': {
-							suggest: '“”',
-							message: 'Please use `“` or `”` instead of `“”`.',
-						},
-					},
-				},
-			],
 			// Reduces readability
 			'unicorn/prefer-ternary': 'off',
 			// Opinionated, doesn't allow Button.tsx
