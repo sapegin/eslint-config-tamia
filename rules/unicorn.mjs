@@ -5,22 +5,22 @@ export default [
 	{
 		rules: {
 			// Prefer reading a JSON file as a buffer
-			'prefer-json-parse-buffer': 'error',
+			'unicorn/prefer-json-parse-buffer': 'error',
 			// Enforce better typography in strings
-			'string-content': [
+			'unicorn/string-content': [
 				'error',
 				{
 					patterns: {
 						// Ellipsis: ... → …
 						'\\.\\.\\.': '…',
 						// Apostrophe: ' → ’
-						"'": '’',
+						"’": '’',
 						// Fancy arrows: -> → →
-						'->': '→',
+						'→': '→',
 						// Fancy quotes: " → “ or ”
-						'"': {
+						'“”': {
 							suggest: '“”',
-							message: 'Please use `“` or `”` instead of `"`.',
+							message: 'Please use `“` or `”` instead of `“”`.',
 						},
 					},
 				},
