@@ -1,5 +1,3 @@
- 
-
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 
 export default [
@@ -36,6 +34,8 @@ export default [
 						prev: false, // Prev/next pair is good
 						prop: false, // Convention in React
 						props: false, // Convention in React
+						req: false, // Convention in Express.js and MSW
+						res: false, // Convention in Express.js and MSW
 						ref: false, // Convention in React
 						refs: false, // Convention in React
 						i: false, // Standard for `for` loops
