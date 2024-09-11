@@ -17,32 +17,10 @@ export default [
 			'unicorn/prefer-set-has': 'off',
 			// I don't need this
 			'unicorn/no-process-exit': 'off',
-			// Disable some abbreviation replacements
-			'unicorn/prevent-abbreviations': [
-				'warn',
-				{
-					replacements: {
-						db: false, // Database is long, and db is very common
-						arg: false,
-						args: false, // arguments_
-						env: false, // Environment is long, and env is very common
-						fn: false, // function_
-						func: {
-							fn: true,
-							function: false,
-						},
-						prev: false, // Prev/next pair is good
-						prop: false, // Convention in React
-						props: false, // Convention in React
-						req: false, // Convention in Express.js and MSW
-						res: false, // Convention in Express.js and MSW
-						ref: false, // Convention in React
-						refs: false, // Convention in React
-						i: false, // Standard for `for` loops
-						j: false, // Standard for `for` loops
-					},
-				},
-			],
+			// Disable abbreviation replacements because it breaks many
+			// established naming conventions and often produces ugly code, like
+			// `import { vars as variables } from '.'`
+			'unicorn/prevent-abbreviations': 'off',
 		},
 	},
 ];
