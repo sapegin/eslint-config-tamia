@@ -10,6 +10,8 @@ export default [
 			'unicorn/no-array-reduce': 'off',
 			// This is too opinionated
 			'unicorn/no-magic-array-flat-depth': 'off',
+			// JavaScript and third-party libraries still rely too much on `null`
+			'unicorn/no-null': 'off',
 			// I don't need this
 			'unicorn/no-process-exit': 'off',
 			// Prefer reading a JSON file as a buffer
