@@ -73,6 +73,7 @@ export default [
 				},
 				{
 					selector: 'parameter',
+					// Allow PascalCase for React components as function parameters
 					format: ['camelCase', 'PascalCase'],
 					// Allow _ for unused function arguments
 					leadingUnderscore: 'allow',
