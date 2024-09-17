@@ -73,7 +73,7 @@ export default [
 				},
 				{
 					selector: 'parameter',
-					format: ['camelCase'],
+					format: ['camelCase', 'PascalCase'],
 					// Allow _ for unused function arguments
 					leadingUnderscore: 'allow',
 				},
