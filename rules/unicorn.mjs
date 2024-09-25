@@ -4,8 +4,16 @@ export default [
 	eslintPluginUnicorn.configs['flat/recommended'],
 	{
 		rules: {
-			// Opinionated, doesn't allow Button.tsx
-			'unicorn/filename-case': 'off',
+			// Require camelCase (getIt.ts) and PascalCase (Box.tsx) file names
+			'unicorn/filename-case': [
+				'error',
+				{
+					cases: {
+						camelCase: true,
+						pascalCase: true,
+					},
+				},
+			],
 			// Opinionated, sometimes you need it
 			'unicorn/no-array-reduce': 'off',
 			// This is too opinionated
