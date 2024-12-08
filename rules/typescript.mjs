@@ -60,7 +60,7 @@ export default [
 				{
 					selector: 'property',
 					// Null is a requirement
-					// eslint-disable-next-line unicorn/no-null
+					 
 					format: null,
 				},
 				{
