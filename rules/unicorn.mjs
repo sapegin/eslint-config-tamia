@@ -14,6 +14,9 @@ export default [
 			'unicorn/no-null': 'off',
 			// I don't need this
 			'unicorn/no-process-exit': 'off',
+			// This breaks a lot of code, like `typeof window` to detect that
+			// we're in the browser
+			'unicorn/prefer-global-this': 'off',
 			// Prefer reading a JSON file as a buffer
 			'unicorn/prefer-json-parse-buffer': 'error',
 			// Set.has() might be faster than Array.includes() but who cares
