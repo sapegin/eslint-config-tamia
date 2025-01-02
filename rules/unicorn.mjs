@@ -14,6 +14,9 @@ export default [
 			'unicorn/no-null': 'off',
 			// I don't need this
 			'unicorn/no-process-exit': 'off',
+			// Prevents explicitly exporting `undefined` as a value:
+			// `return x.length > 0 x : undefined`
+			'unicorn/no-useless-undefined': 'off',
 			// This breaks a lot of code, like `typeof window` to detect that
 			// we're in the browser
 			'unicorn/prefer-global-this': 'off',
