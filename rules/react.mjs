@@ -4,7 +4,7 @@ import react from 'eslint-plugin-react';
 /** @type { import("eslint").Linter.FlatConfig[] } */
 export default [
 	{
-		files: ['**/*.{js,jsx,mjs,cjs,tsx}'],
+		files: ['**/*.{js,jsx,mjs,cjs,tsx,mts,mtsx,spec.js,test.js}'],
 		...react.configs.flat.recommended,
 		languageOptions: {
 			...react.configs.flat.recommended.languageOptions,

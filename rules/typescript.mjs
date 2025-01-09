@@ -17,7 +17,7 @@ const recommendedConfig = findConfig('typescript-eslint/recommended');
 export default [
 	{
 		// Only apply to files with TypeScript
-		files: ['**/*.{ts,tsx,astro}'],
+		files: ['**/*.{ts,tsx,mts,mtsx,astro}'],
 
 		// Copy the basic options from the recommended config
 		languageOptions: baseConfig.languageOptions,
@@ -60,7 +60,7 @@ export default [
 				{
 					selector: 'property',
 					// Null is a requirement
-					 
+
 					format: null,
 				},
 				{
