@@ -2,6 +2,9 @@
 	"name": "eslint-config-tamia",
 	"description": "Tâmia ESLint config",
 	"version": "0.0.0-development",
+	"engines": {
+		"node": ">=22"
+	},
 	"type": "module",
 	"main": "index.mjs",
 	"exports": {
