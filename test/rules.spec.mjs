@@ -9,7 +9,7 @@ for (const file of fs.readdirSync(path.resolve('./rules'))) {
 	}
 
 	test(`does not throw when requiring ${file}`, () => {
-		// eslint-disable-next-line unicorn/consistent-function-scoping
+		 
 		const function_ = async () => {
 			await import(`../rules/${name}.mjs`);
 		};
