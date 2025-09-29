@@ -10,9 +10,6 @@ export default [
 			// This breaks a lot of code, like `typeof window` to detect that we're in
 			// the browser
 			'unicorn/prefer-global-this': 'off',
-			// Prefer reading a JSON file as a buffer. Buffers can be passed directly to
-			// JSON.parse()
-			'unicorn/prefer-json-parse-buffer': 'error',
 			// Set.has() might be faster than Array.includes() but who cares if the array
 			// is short. Set is less readable
 			'unicorn/prefer-set-has': 'off',
