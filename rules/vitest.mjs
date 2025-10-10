@@ -25,8 +25,8 @@ export default [
 			'vitest/padding-around-after-each-blocks': 'warn',
 			'vitest/padding-around-before-all-blocks': 'warn',
 			'vitest/padding-around-before-each-blocks': 'warn',
-			'vitest/padding-around-describe-blocks)': 'warn',
-			'vitest/padding-around-test-blocks)': 'warn',
+			'vitest/padding-around-describe-blocks': 'warn',
+			'vitest/padding-around-test-blocks': 'warn',
 		},
 	},
 ];
