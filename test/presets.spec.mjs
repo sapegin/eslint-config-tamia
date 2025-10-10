@@ -6,6 +6,7 @@ test.each(['index', 'react', 'typescript', 'typescript-react'])(
 		const function_ = async () => {
 			await import(`../${name}.mjs`);
 		};
+
 		expect(function_).not.toThrow();
 	}
 );

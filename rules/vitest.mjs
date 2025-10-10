@@ -19,8 +19,14 @@ export default [
 			'vitest/consistent-vitest-vi': 'error',
 			// Disallow focused tests such as test.only()
 			'vitest/no-focused-tests': 'error',
-			// Enforce padding around vitest functions
-			'vitest/padding-around-all': 'warn',
+			// Enforce padding around vitest functions (cannot use padding-around-all as
+			// it include opinionated padding-around-expect-groups rule)
+			'vitest/padding-around-after-all-blocks': 'warn',
+			'vitest/padding-around-after-each-blocks': 'warn',
+			'vitest/padding-around-before-all-blocks': 'warn',
+			'vitest/padding-around-before-each-blocks': 'warn',
+			'vitest/padding-around-describe-blocks)': 'warn',
+			'vitest/padding-around-test-blocks)': 'warn',
 		},
 	},
 ];
