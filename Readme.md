@@ -6,15 +6,18 @@ This package provides a shared ESLint config that I use on all my projects.
 
 **Should be used with [Prettier](https://prettier.io/), has no own code style rules.**
 
+All presets include the following ESLint plugins:
+
+- [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
+- [@eslint-community/eslint-plugin-eslint-comments](https://eslint-community.github.io/eslint-plugin-eslint-comments/)
+
 ## Usage
 
 We export three ESLint configurations:
 
 ### eslint-config-tamia
 
-Base set of rules for JavaScript. Includes:
-
-- [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
+Base set of rules for JavaScript.
 
 `npm install --save-dev eslint eslint-config-tamia`
 
@@ -30,7 +33,6 @@ export default [...tamia];
 Lints ES6+ and React. Includes:
 
 - [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react)
-- [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
 
 `npm install --save-dev eslint eslint-config-tamia`
 
@@ -46,7 +48,6 @@ export default [...tamiaReact];
 Lints TypeScript. Includes:
 
 - [typescript-eslint](https://typescript-eslint.io/)
-- [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
 
 `npm install --save-dev eslint eslint-config-tamia`
 
@@ -63,7 +64,6 @@ Lints TypeScript and React. Includes:
 
 - [typescript-eslint](https://typescript-eslint.io/)
 - [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react)
-- [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
 
 `npm install --save-dev eslint eslint-config-tamia eslint-plugin-jsx-a11y`
 
