@@ -11,7 +11,7 @@ export default [
 				{ pattern: String.raw`.*\.test\.[tj]sx?$` },
 			],
 			// Consistently use test() instead of it()
-			'test/consistent-test-it': [
+			'vitest/consistent-test-it': [
 				'error',
 				{ fn: 'test', withinDescribe: 'test' },
 			],
