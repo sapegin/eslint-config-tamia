@@ -8,8 +8,9 @@ This package provides a shared ESLint config that I use on all my projects.
 
 All presets include the following ESLint plugins:
 
-- [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
 - [@eslint-community/eslint-plugin-eslint-comments](https://eslint-community.github.io/eslint-plugin-eslint-comments/)
+- [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
+- [eslint-plugin-vitest](https://github.com/vitest-dev/eslint-plugin-vitest)
 
 ## Usage
 
