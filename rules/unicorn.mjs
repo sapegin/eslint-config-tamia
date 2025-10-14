@@ -18,7 +18,10 @@ export default [
 			// Avoid conflicts with Prettier
 			'unicorn/escape-case': ['warn', 'lowercase'],
 			// Avoid conflicts with Prettier
-			'unicorn/number-literal-case': ['warn', 'lowercase'],
+			'unicorn/number-literal-case': [
+				'warn',
+				{ hexadecimalValue: 'lowercase' },
+			],
 		},
 	},
 ];
