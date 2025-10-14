@@ -4,14 +4,16 @@ import tseslint from 'typescript-eslint';
 // produces false positives, for examples, in CommonJS files
 
 function findConfig(name) {
-	return tseslint.configs.recommended.find((x) => x.name === name);
+	return tseslint.configs.recommendedTypeChecked.find((x) => x.name === name);
 }
 
 const baseConfig = findConfig('typescript-eslint/base');
 const eslintRecommendedConfig = findConfig(
 	'typescript-eslint/eslint-recommended'
 );
-const recommendedConfig = findConfig('typescript-eslint/recommended');
+const recommendedTypeCheckedConfig = findConfig(
+	'typescript-eslint/recommended-type-checked'
+);
 
 /** @type { import("eslint").Linter.FlatConfig[] } */
 export default [
@@ -19,22 +21,24 @@ export default [
 		// Only apply to files with TypeScript
 		files: ['**/*.{ts,tsx,mts,mtsx,astro}'],
 
-		// Copy the basic options from the recommended config
-		languageOptions: baseConfig.languageOptions,
+		// Apply default TypeScript options and enable type checking
+		languageOptions: {
+			...baseConfig.languageOptions,
+			parserOptions: {
+				projectService: true,
+			},
+		},
 		plugins: baseConfig.plugins,
 
 		rules: {
 			// Recommended rules
 			...eslintRecommendedConfig.rules,
-			...recommendedConfig.rules,
+			...recommendedTypeCheckedConfig.rules,
 
 			// Disable generic rules that conflict with TypeScript
 			// Most of them are disabled in typescript-eslint/eslint-recommended
 			// config, but here are a few more
 			camelcase: 'off',
-			'no-array-constructor': 'off',
-			'no-unused-vars': 'off',
-			'no-unused-expressions': 'off',
 			'no-use-before-define': 'off',
 			'no-shadow': 'off',
 			// Conflicts with TypeScript check for unreachable code
@@ -88,8 +92,6 @@ export default [
 			'@typescript-eslint/no-inferrable-types': 'error',
 			// Disallow non-null assertions using the ! postfix operator
 			'@typescript-eslint/no-non-null-assertion': 'error',
-			// Disallow unused expressions
-			'@typescript-eslint/no-unused-expressions': 'error',
 			// Disallow variable declarations from shadowing variables declared
 			// in the outer scope
 			'@typescript-eslint/no-shadow': 'error',
