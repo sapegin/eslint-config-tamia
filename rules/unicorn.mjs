@@ -15,6 +15,10 @@ export default [
 			'unicorn/prefer-set-has': 'off',
 			// Ternaries often reduce readability
 			'unicorn/prefer-ternary': 'off',
+			// Avoid conflicts with Prettier
+			'unicorn/escape-case': ['warn', 'lowercase'],
+			// Avoid conflicts with Prettier
+			'unicorn/number-literal-case': ['warn', 'lowercase'],
 		},
 	},
 ];
