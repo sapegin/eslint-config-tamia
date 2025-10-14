@@ -12,6 +12,7 @@ All presets include the following ESLint plugins:
 - [eslint-plugin-de-morgan](https://github.com/azat-io/eslint-plugin-de-morgan)
 - [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
 - [eslint-plugin-vitest](https://github.com/vitest-dev/eslint-plugin-vitest)
+- [eslint-plugin-washing-code](https://github.com/sapegin/eslint-plugin-washing-code/)
 
 ## Usage
 
