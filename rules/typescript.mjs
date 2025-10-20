@@ -32,7 +32,7 @@ export default [
 	},
 	{
 		// Only apply to files with TypeScript
-		files: ['**/*.{ts,tsx,mts,mtsx,astro}'],
+		files: ['**/*.{ts,tsx,mts,mtsx}', '**/*.astro/*.ts'],
 
 		plugins: baseConfig.plugins,
 
