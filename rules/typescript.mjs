@@ -134,9 +134,6 @@ export default [
 			// Enforce using the nullish coalescing operator instead of logical
 			// assignments or chaining
 			'@typescript-eslint/prefer-nullish-coalescing': 'error',
-			// Require function parameters to be typed as readonly to prevent accidental
-			// mutation of inputs
-			'@typescript-eslint/prefer-readonly-parameter-types': 'error',
 			// Enforce using type parameter when calling `Array.reduce()` instead of
 			// using a type assertion
 			'@typescript-eslint/prefer-reduce-type-parameter': 'error',
