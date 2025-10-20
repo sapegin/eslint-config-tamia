@@ -18,8 +18,8 @@ const recommendedTypeCheckedConfig = findConfig(
 /** @type { import("eslint").Linter.FlatConfig[] } */
 export default [
 	{
-		// Only apply to files with TypeScript
-		files: ['**/*.{ts,tsx,mts,mtsx,astro}'],
+		// Configure TypeScript parser
+		files: ['**/*.{ts,tsx,mts,mtsx}'],
 
 		// Extend default TypeScript options
 		languageOptions: {
@@ -27,11 +27,13 @@ export default [
 			parserOptions: {
 				// Enable type support for rule that use types
 				projectService: true,
-				// Extra configuration for Astro
-				extraFileExtensions: ['.astro'],
-				sourceType: 'module',
 			},
 		},
+	},
+	{
+		// Only apply to files with TypeScript
+		files: ['**/*.{ts,tsx,mts,mtsx,astro}'],
+
 		plugins: baseConfig.plugins,
 
 		rules: {
