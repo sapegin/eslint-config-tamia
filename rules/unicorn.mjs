@@ -4,6 +4,22 @@ export default [
 	eslintPluginUnicorn.configs.unopinionated,
 	{
 		rules: {
+			// Import styles for Node.js modules, adds more modules than the default
+			// config has
+			'unicorn/import-styles': [
+				'warn',
+				{
+					styles: {
+						'node:child_process': { named: true },
+						'node:fs': { default: true },
+						'node:fs/promises': { default: true },
+						'node:path': { default: true },
+						'node:os': { default: true },
+						'node:readline': { default: true },
+						'node:util': { named: true },
+					},
+				},
+			],
 			// Prevents explicitly exporting `undefined` as a value:
 			// - `return x.length > 0 x : undefined`
 			'unicorn/no-useless-undefined': 'off',
