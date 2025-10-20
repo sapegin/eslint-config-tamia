@@ -21,11 +21,15 @@ export default [
 		// Only apply to files with TypeScript
 		files: ['**/*.{ts,tsx,mts,mtsx,astro}'],
 
-		// Apply default TypeScript options and enable type checking
+		// Extend default TypeScript options
 		languageOptions: {
 			...baseConfig.languageOptions,
 			parserOptions: {
+				// Enable type support for rule that use types
 				projectService: true,
+				// Extra configuration for Astro
+				extraFileExtensions: ['.astro'],
+				sourceType: 'module',
 			},
 		},
 		plugins: baseConfig.plugins,
