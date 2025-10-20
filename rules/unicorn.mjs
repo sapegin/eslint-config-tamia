@@ -6,7 +6,7 @@ export default [
 		rules: {
 			// Import styles for Node.js modules, adds more modules than the default
 			// config has
-			'unicorn/import-styles': [
+			'unicorn/import-style': [
 				'warn',
 				{
 					styles: {
