@@ -61,6 +61,18 @@ import tamiaTypeScript from 'eslint-config-tamia/typescript';
 export default [...tamiaTypeScript];
 ```
 
+This config uses types for linting, so you need to have `tsconfig.json` that looks like this:
+
+```json
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "strict": true
+  },
+  "include": ["src/*", "*.ts"]
+}
+```
+
 ### eslint-config-tamia/typescript-react
 
 Lints TypeScript and React. Includes:
@@ -80,6 +92,19 @@ export default [
   ...tamiaTypeScriptReact,
   jsxAccessibility.flatConfigs.strict
 ];
+```
+
+This config uses types for linting, so you need to have `tsconfig.json` that looks like this:
+
+```json
+{
+  "compilerOptions": {
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "strict": true
+  },
+  "include": ["src/*", "*.ts"]
+}
 ```
 
 ## Code style at a glance
