@@ -8,12 +8,11 @@ for (const file of fs.readdirSync(path.resolve('./rules'))) {
 		continue;
 	}
 
-	test(`does not throw when requiring ${file}`, () => {
-		 
+	test(`does not throw when requiring ${file}`, async () => {
 		const function_ = async () => {
 			await import(`../rules/${name}.mjs`);
 		};
 
-		expect(function_).not.toThrow();
+		await expect(function_).not.toThrow();
 	});
 }

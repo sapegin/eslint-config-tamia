@@ -20,6 +20,8 @@ export default [
 					},
 				},
 			],
+			// Disallow immediate mutation after variable assignment
+			'unicorn/no-immediate-mutation': 'error',
 			// Prevents explicitly exporting `undefined` as a value:
 			// - `return x.length > 0 x : undefined`
 			'unicorn/no-useless-undefined': 'off',
