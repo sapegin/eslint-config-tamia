@@ -10,9 +10,10 @@ All presets include the following ESLint plugins:
 
 - [@eslint-community/eslint-plugin-eslint-comments](https://eslint-community.github.io/eslint-plugin-eslint-comments/)
 - [eslint-plugin-de-morgan](https://github.com/azat-io/eslint-plugin-de-morgan)
+- [eslint-plugin-simple-import-sort](https://github.com/lydell/eslint-plugin-simple-import-sort)
 - [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
 - [eslint-plugin-vitest](https://github.com/vitest-dev/eslint-plugin-vitest)
-- [eslint-plugin-washing-code](https://github.com/sapegin/eslint-plugin-washing-code/)
+- [eslint-plugin-washing-code](https://github.com/sapegin/eslint-plugin-washing-code)
 
 ## Usage
 

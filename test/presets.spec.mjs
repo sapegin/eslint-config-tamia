@@ -1,4 +1,4 @@
-import { test, expect } from 'vitest';
+import { expect,test } from 'vitest';
 
 test.each(['index', 'react', 'typescript', 'typescript-react'])(
 	'does not throw when requiring %s.mjs',

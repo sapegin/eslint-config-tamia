@@ -1,5 +1,5 @@
-import globals from 'globals';
 import js from '@eslint/js';
+import globals from 'globals';
 
 /** @type { import("eslint").Linter.FlatConfig[] } */
 export default [

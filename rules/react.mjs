@@ -1,5 +1,5 @@
-import globals from 'globals';
 import react from 'eslint-plugin-react';
+import globals from 'globals';
 
 /** @type { import("eslint").Linter.FlatConfig[] } */
 export default [
