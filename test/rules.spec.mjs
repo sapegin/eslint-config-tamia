@@ -9,10 +9,6 @@ for (const file of fs.readdirSync(path.resolve('./rules'))) {
 	}
 
 	test(`does not throw when requiring ${file}`, async () => {
-		const function_ = async () => {
-			await import(`../rules/${name}.mjs`);
-		};
-
-		await expect(function_).not.toThrow();
+		await expect(import(`../rules/${name}.mjs`)).resolves.toBeDefined();
 	});
 }
