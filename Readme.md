@@ -32,21 +32,6 @@ import tamia from 'eslint-config-tamia';
 export default [...tamia];
 ```
 
-### eslint-config-tamia/react
-
-Lints ES6+ and React. Includes:
-
-- [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react)
-
-`npm install --save-dev eslint eslint-config-tamia`
-
-`eslint.config.mjs`:
-
-```js
-import tamiaReact from 'eslint-config-tamia/react';
-export default [...tamiaReact];
-```
-
 ### eslint-config-tamia/typescript
 
 Lints TypeScript. Includes:

@@ -1,67 +1,35 @@
-import react from 'eslint-plugin-react';
-import globals from 'globals';
+import eslintReact from '@eslint-react/eslint-plugin';
+import tseslint from 'typescript-eslint';
+
+// Docs: https://github.com/Rel1cx/eslint-react
+
+// Use type-checked recommended config
+const recommendedPreset = eslintReact.configs['recommended-type-checked'];
 
 /** @type { import("eslint").Linter.FlatConfig[] } */
 export default [
 	{
-		files: ['**/*.{js,jsx,mjs,cjs,tsx,mts,mtsx,spec.js,test.js}'],
-		...react.configs.flat.recommended,
+		// Only support TypeScript files
+		files: ['**/*.{ts,tsx,mtsx}'],
+		plugins: recommendedPreset.plugins,
+		// Configure language/parsing options
 		languageOptions: {
-			...react.configs.flat.recommended.languageOptions,
-			globals: {
-				...globals.es2024,
-				...globals.browser,
+			// Use TypeScript ESLint parser for TypeScript files
+			parser: tseslint.parser,
+			parserOptions: {
+				// Enable project service for better TypeScript integration
+				projectService: true,
+				tsconfigRootDir: import.meta.dirname,
 			},
 		},
-		settings: {
-			react: {
-				version: 'detect',
-			},
-		},
-		// View link below for react rules documentation
-		// https://github.com/yannickcr/eslint-plugin-react#list-of-supported-rules
 		rules: {
-			// Enforce boolean attributes notation in JSX
-			'react/jsx-boolean-value': ['error', 'never'],
-			// Enforce event handler naming conventions in JSX
-			'react/jsx-handler-names': [
-				'error',
-				{
-					eventHandlerPrefix: 'handle',
-					eventHandlerPropPrefix: 'on',
-				},
-			],
-			// Validate JSX has key prop when in array or iterator
-			'react/jsx-key': 'error',
-			// Prevent usage of .bind() and arrow functions in JSX props
-			'react/jsx-no-bind': [
-				'error',
-				{
-					allowArrowFunctions: true,
-				},
-			],
+			// Include recommended rules
+			...recommendedPreset.rules,
+
+			// Enforces the use of shorthand syntax for boolean attributes
+			'@eslint-react/jsx-shorthand-boolean': 'warn',
 			// Enforce PascalCase for user-defined JSX components
-			'react/jsx-pascal-case': 'error',
-			// Require ES6 class declarations over React.createClass
-			'react/prefer-es6-class': ['error', 'always'],
-			// Enforce stateless React Components to be written as a pure function
-			'react/prefer-stateless-function': 'error',
-			// Prevent extra closing tags for components without children
-			'react/self-closing-comp': [
-				'error',
-				{
-					component: true,
-					html: false,
-				},
-			],
-			// Prevent void DOM elements (e.g. <img />, <br />) from receiving children
-			'react/void-dom-elements-no-children': 'error',
-			// Enforce style prop value being an object
-			'react/style-prop-object': 'error',
-			// Prevent usage of setState in componentWillUpdate
-			'react/no-will-update-set-state': 'error',
-			// Prevents common typos
-			'react/no-typos': 'error',
+			'@eslint-react/naming-convention/component-name': ['warn', 'PascalCase'],
 		},
 	},
 ];
