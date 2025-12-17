@@ -1,7 +1,7 @@
 {
 	"name": "eslint-config-tamia",
 	"description": "Tâmia ESLint config",
-	"version": "9.9.0",
+	"version": "9.9.1",
 	"engines": {
 		"node": ">=22"
 	},
