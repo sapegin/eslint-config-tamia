@@ -126,7 +126,7 @@ export default [
 			'@typescript-eslint/no-unnecessary-condition': [
 				'error',
 				{
-					allowConstantLoopConditions: 'only-allowed-literal',
+					allowConstantLoopConditions: 'only-allowed-literals',
 				},
 			],
 			// Disallow unnecessary assignment of constructor property parameter
