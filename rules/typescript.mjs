@@ -123,7 +123,12 @@ export default [
 			// in the outer scope
 			'@typescript-eslint/no-shadow': 'error',
 			// Disallow conditionals where the type is always truthy or always falsy
-			'@typescript-eslint/no-unnecessary-condition': 'error',
+			'@typescript-eslint/no-unnecessary-condition': [
+				'error',
+				{
+					allowConstantLoopConditions: 'only-allowed-literal',
+				},
+			],
 			// Disallow unnecessary assignment of constructor property parameter
 			'@typescript-eslint/no-unnecessary-parameter-property-assignment':
 				'error',
