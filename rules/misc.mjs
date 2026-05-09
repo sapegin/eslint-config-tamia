@@ -11,6 +11,10 @@ export default [
 	// Rules inspired by Washing your code book
 	washingCode.configs.recommended,
 	{
-		rules: {},
+		rules: {
+			// This doesn't do well with AI-written code, and I need to rethink my
+			// approach
+			'washing-code/explicit-boolean-check': 'off',
+		},
 	},
 ];
