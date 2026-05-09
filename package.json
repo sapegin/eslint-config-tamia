@@ -17,7 +17,9 @@
 	},
 	"files": [
 		"rules",
-		"*.mjs"
+		"index.mjs",
+		"typescript.mjs",
+		"typescript-react.mjs"
 	],
 	"scripts": {
 		"pretest": "npm run lint",
