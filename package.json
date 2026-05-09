@@ -11,15 +11,12 @@
 		".": {
 			"import": "./index.mjs"
 		},
-		"./react": "./react.mjs",
 		"./typescript": "./typescript.mjs",
 		"./typescript-react": "./typescript-react.mjs"
 	},
 	"files": [
 		"rules",
-		"index.mjs",
-		"typescript.mjs",
-		"typescript-react.mjs"
+		"*.mjs"
 	],
 	"scripts": {
 		"pretest": "npm run lint",
