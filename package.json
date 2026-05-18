@@ -1,9 +1,9 @@
 {
-	"name": "eslint-config-tamia",
-	"description": "Tâmia ESLint config",
+	"name": "oxlint-config-raccoon",
+	"description": "Artem Sapegin’s Oxlint config",
 	"version": "9.9.2",
 	"engines": {
-		"node": ">=22"
+		"node": ">=24"
 	},
 	"type": "module",
 	"main": "index.mjs",
@@ -27,11 +27,11 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/sapegin/eslint-config-tamia"
+		"url": "https://github.com/sapegin/oxlint-config-raccoon"
 	},
 	"keywords": [
-		"eslintconfig",
-		"tamia"
+		"oxlint",
+		"oxlintconfig"
 	],
 	"author": {
 		"name": "Artem Sapegin",
@@ -39,9 +39,9 @@
 	},
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/sapegin/eslint-config-tamia/issues"
+		"url": "https://github.com/sapegin/oxlint-config-raccoon/issues"
 	},
-	"homepage": "https://github.com/sapegin/eslint-config-tamia",
+	"homepage": "https://github.com/sapegin/oxlint-config-raccoon",
 	"devDependencies": {
 		"@types/eslint__js": "^8.42.3",
 		"@types/react": "^19.2.7",

@@ -1,12 +1,12 @@
-# eslint-config-tamia
+# oxlint-config-raccoon
 
-[![npm](https://img.shields.io/npm/v/eslint-config-tamia.svg)](https://www.npmjs.com/package/eslint-config-tamia) [![Node.js CI status](https://github.com/sapegin/eslint-config-tamia/workflows/Node.js%20CI/badge.svg)](https://github.com/sapegin/eslint-config-tamia/actions)
+[![npm](https://img.shields.io/npm/v/oxlint-config-raccoon.svg)](https://www.npmjs.com/package/oxlint-config-raccoon) [![Node.js CI status](https://github.com/sapegin/oxlint-config-raccoon/workflows/Node.js%20CI/badge.svg)](https://github.com/sapegin/oxlint-config-raccoon/actions)
 
-This package provides a shared ESLint config that I use on all my projects.
+This package provides a shared Oxlint config that I use on all my projects.
 
 **Should be used with [Prettier](https://prettier.io/), has no own code style rules.**
 
-All presets include the following ESLint plugins:
+All presets include the following Oxlint plugins:
 
 - [@eslint-community/eslint-plugin-eslint-comments](https://eslint-community.github.io/eslint-plugin-eslint-comments/)
 - [eslint-plugin-de-morgan](https://github.com/azat-io/eslint-plugin-de-morgan)
@@ -17,33 +17,33 @@ All presets include the following ESLint plugins:
 
 ## Usage
 
-We export three ESLint configurations:
+We export three Oxlint configurations:
 
-### eslint-config-tamia
+### oxlint-config-raccoon
 
 Base set of rules for JavaScript.
 
-`npm install --save-dev eslint eslint-config-tamia`
+`npm install --save-dev eslint oxlint-config-raccoon`
 
 `eslint.config.mjs`:
 
 ```js
-import tamia from 'eslint-config-tamia';
+import tamia from 'oxlint-config-raccoon';
 export default [...tamia];
 ```
 
-### eslint-config-tamia/typescript
+### oxlint-config-raccoon/typescript
 
 Lints TypeScript. Includes:
 
 - [typescript-eslint](https://typescript-eslint.io/)
 
-`npm install --save-dev eslint eslint-config-tamia`
+`npm install --save-dev eslint oxlint-config-raccoon`
 
 `eslint.config.mjs`:
 
 ```js
-import tamiaTypeScript from 'eslint-config-tamia/typescript';
+import tamiaTypeScript from 'oxlint-config-raccoon/typescript';
 export default [...tamiaTypeScript];
 ```
 
@@ -59,19 +59,19 @@ This config uses types for linting, so you need to have `tsconfig.json` that loo
 }
 ```
 
-### eslint-config-tamia/typescript-react
+### oxlint-config-raccoon/typescript-react
 
 Lints TypeScript and React. Includes:
 
 - [typescript-eslint](https://typescript-eslint.io/)
 - [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react)
 
-`npm install --save-dev eslint eslint-config-tamia eslint-plugin-jsx-a11y`
+`npm install --save-dev eslint oxlint-config-raccoon eslint-plugin-jsx-a11y`
 
 `eslint.config.mjs`:
 
 ```js
-import tamiaTypeScriptReact from 'eslint-config-tamia/typescript-react';
+import tamiaTypeScriptReact from 'oxlint-config-raccoon/typescript-react';
 import jsxAccessibility from 'eslint-plugin-jsx-a11y';
 
 export default [

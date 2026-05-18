@@ -1,12 +1,12 @@
-# ESLint config structure
+# Oxlint config structure
 
-This ESLint configuration is organized into modular rule files and preset configurations.
+This Oxlint configuration is organized into modular rule files and preset configurations.
 
 ## Structure
 
 ### Rules directory (`rules/`)
 
-Each file in the `rules/` directory contains a specific category of ESLint rules, such as:
+Each file in the `rules/` directory contains a specific category of Oxlint rules, such as:
 
 - `javascript.mjs` - Core JavaScript rules
 - `typescript.mjs` - TypeScript rules
