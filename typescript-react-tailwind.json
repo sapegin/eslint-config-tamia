@@ -1,0 +1,36 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "extends": ["./typescript-react.json"],
+  "plugins": [],
+  "jsPlugins": ["oxlint-tailwindcss"],
+  "rules": {
+    // Reports classes not recognized by Tailwind CSS
+    "tailwindcss/no-unknown-classes": "error",
+    // Detects classes that set the same CSS property
+    "tailwindcss/no-conflicting-classes": "error",
+    // Detects repeated classes in the same string
+    "tailwindcss/no-duplicate-classes": "warn",
+    // Detects classes deprecated in Tailwind CSS v4
+    "tailwindcss/no-deprecated-classes": "warn",
+    // Requires a base (light) utility when using the dark: variant on the same element
+    "tailwindcss/no-dark-without-light": "warn",
+    // Detects variant-prefixed classes that are redundant
+    "tailwindcss/no-contradicting-variants": "warn",
+    // Enforces canonical Tailwind CSS class names
+    "tailwindcss/enforce-canonical": "warn",
+    // Suggests shorthand classes when all axes have the same value
+    "tailwindcss/enforce-shorthand": "warn",
+    // Enforces a consistent position for the ! (important) modifier
+    "tailwindcss/enforce-consistent-important-position": "warn",
+    // Moves the negative sign inside arbitrary value brackets for consistency
+    "tailwindcss/enforce-negative-arbitrary-values": "warn",
+    // Enforces consistent CSS variable syntax
+    "tailwindcss/enforce-consistent-variable-syntax": "warn",
+    // Flags hardcoded color values in arbitrary brackets
+    "tailwindcss/no-hardcoded-colors": "warn",
+    // Detects arbitrary values that have a named Tailwind equivalent
+    "tailwindcss/no-unnecessary-arbitrary-value": "warn",
+    // Suggests replacing raw CSS variable references like border-(--border) with the equivalent named theme-token utility
+    "tailwindcss/prefer-theme-tokens": "warn"
+  }
+}
