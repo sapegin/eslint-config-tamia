@@ -1,0 +1,45 @@
+import eslintPluginUnicorn from 'eslint-plugin-unicorn';
+
+export default [
+	eslintPluginUnicorn.configs.unopinionated,
+	{
+		rules: {
+			// Import styles for Node.js modules, adds more modules than the default
+			// config has
+			'unicorn/import-style': [
+				'warn',
+				{
+					styles: {
+						'node:child_process': { named: true },
+						'node:fs': { default: true },
+						'node:fs/promises': { default: true },
+						'node:path': { default: true },
+						'node:os': { default: true },
+						'node:readline': { default: true },
+						'node:util': { named: true },
+					},
+				},
+			],
+			// Disallow immediate mutation after variable assignment
+			'unicorn/no-immediate-mutation': 'error',
+			// Prevents explicitly exporting `undefined` as a value:
+			// - `return x.length > 0 x : undefined`
+			'unicorn/no-useless-undefined': 'off',
+			// This breaks a lot of code, like `typeof window` to detect that we're in
+			// the browser
+			'unicorn/prefer-global-this': 'off',
+			// Set.has() might be faster than Array.includes() but who cares if the array
+			// is short. Set is less readable
+			'unicorn/prefer-set-has': 'off',
+			// Ternaries often reduce readability
+			'unicorn/prefer-ternary': 'off',
+			// Avoid conflicts with Prettier
+			'unicorn/escape-case': ['warn', 'lowercase'],
+			// Avoid conflicts with Prettier
+			'unicorn/number-literal-case': [
+				'warn',
+				{ hexadecimalValue: 'lowercase' },
+			],
+		},
+	},
+];

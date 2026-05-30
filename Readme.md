@@ -2,99 +2,114 @@
 
 [![npm](https://img.shields.io/npm/v/oxlint-config-raccoon.svg)](https://www.npmjs.com/package/oxlint-config-raccoon) [![Node.js CI status](https://github.com/sapegin/oxlint-config-raccoon/workflows/Node.js%20CI/badge.svg)](https://github.com/sapegin/oxlint-config-raccoon/actions)
 
-Shared [Oxlint](https://oxc.rs/docs/guide/usage/linter) and [Oxfmt](https://oxc.rs/docs/guide/usage/formatter) configurations that I use on all my projects.
+This package provides a shared Oxlint config that I use on all my projects.
 
-- All linter presets rely on Oxlint’s built-in plugins (`eslint`, `unicorn`, `vitest`, `import`, `jsdoc`, `promise`, `typescript`, `react`, and `jsx-a11y` where appropriate).
-- Type-aware TypeScript rules are provided through [`oxlint-tsgolint`](https://github.com/oxc-project/tsgolint).
-- Tailwind CSS support is opt-in through [`oxlint-tailwindcss`](https://github.com/sergioazoc/oxlint-tailwindcss). The formatter preset uses Oxfmt’s built-in import, `package.json`, and Tailwind class sorting.
+**Should be used with [Prettier](https://prettier.io/), has no own code style rules.**
 
-## Presets
+All presets include the following Oxlint plugins:
 
-| Preset | Extends | Adds |
-| --- | --- | --- |
-| `oxlint-config-raccoon` / `oxlint-config-raccoon/base` | — | JavaScript baseline (core + Unicorn + Vitest) |
-| `oxlint-config-raccoon/typescript` | `base` | `typescript` plugin and type-aware rules |
-| `oxlint-config-raccoon/typescript-react` | `typescript` | `react` and `jsx-a11y` plugins |
-| `oxlint-config-raccoon/typescript-react-tailwind` | `typescript-react` | `oxlint-tailwindcss` JS plugin |
-| `oxlint-config-raccoon/oxfmt` | — | Oxfmt formatter preset |
-
-## Installation
-
-```sh
-npm install --save-dev oxlint oxlint-tsgolint oxfmt oxlint-config-raccoon
-```
-
-For the Tailwind preset, also install:
-
-```sh
-npm install --save-dev oxlint-tailwindcss
-```
+- [@eslint-community/eslint-plugin-eslint-comments](https://eslint-community.github.io/eslint-plugin-eslint-comments/)
+- [eslint-plugin-de-morgan](https://github.com/azat-io/eslint-plugin-de-morgan)
+- [eslint-plugin-simple-import-sort](https://github.com/lydell/eslint-plugin-simple-import-sort)
+- [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
+- [eslint-plugin-vitest](https://github.com/vitest-dev/eslint-plugin-vitest)
+- [eslint-plugin-washing-code](https://github.com/sapegin/eslint-plugin-washing-code)
 
 ## Usage
 
-### Oxlint
+We export three Oxlint configurations:
 
-Create `oxlint.config.ts`:
+### oxlint-config-raccoon
 
-```ts
-import config from 'oxlint-config-raccoon/typescript-react' with { type: 'json' };
-import { defineConfig } from 'oxlint';
+Base set of rules for JavaScript.
 
-export default defineConfig({
-  extends: [config],
-  options: {
-    typeAware: true,
-    typeCheck: true
-  }
-});
+`npm install --save-dev eslint oxlint-config-raccoon`
+
+`eslint.config.mjs`:
+
+```js
+import tamia from 'oxlint-config-raccoon';
+export default [...tamia];
 ```
 
-> [!IMPORTANT] `options.typeAware` and `options.typeCheck` are only honoured in the **root** config file, so the presets do not set them — you must enable type-aware linting yourself when extending the `typescript`, `typescript-react`, or `typescript-react-tailwind` presets.
+### oxlint-config-raccoon/typescript
 
-> [!IMPORTANT] Type-aware linting requires `tsconfig.json` and TypeScript 7+ via [`typescript-go`](https://github.com/microsoft/typescript-go); some legacy options like `baseUrl` are not supported. See the [Oxlint type-aware guide](https://oxc.rs/docs/guide/usage/linter/type-aware.html).
+Lints TypeScript. Includes:
 
-### Oxfmt
+- [typescript-eslint](https://typescript-eslint.io/)
 
-Create `oxfmt.config.ts`:
+`npm install --save-dev eslint oxlint-config-raccoon`
 
-```ts
-import config from 'oxlint-config-raccoon/oxfmt' with { type: 'json' };
-import { defineConfig } from 'oxfmt';
+`eslint.config.mjs`:
 
-export default defineConfig(config);
+```js
+import tamiaTypeScript from 'oxlint-config-raccoon/typescript';
+export default [...tamiaTypeScript];
 ```
 
-### Tailwind CSS
+This config uses types for linting, so you need to have `tsconfig.json` that looks like this:
 
-The Tailwind lint preset targets **Tailwind CSS v4** (the constraint comes from `oxlint-tailwindcss`). Tell the plugin where to find your Tailwind entry point in your root config:
-
-```ts
-import config from 'oxlint-config-raccoon/typescript-react-tailwind' with { type: 'json' };
-import { defineConfig } from 'oxlint';
-
-export default defineConfig({
-  extends: [config],
-  options: { typeAware: true },
-  settings: {
-    tailwindcss: {
-      entryPoint: 'src/styles/app.css'
-    }
-  }
-});
+```json
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "strict": true
+  },
+  "include": ["src/*", "*.ts"]
+}
 ```
 
-Class sorting is intentionally left to Oxfmt (`sortTailwindcss` in `oxfmt.json`) to avoid two tools fighting over the order.
+### oxlint-config-raccoon/typescript-react
+
+Lints TypeScript and React. Includes:
+
+- [typescript-eslint](https://typescript-eslint.io/)
+- [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react)
+
+`npm install --save-dev eslint oxlint-config-raccoon eslint-plugin-jsx-a11y`
+
+`eslint.config.mjs`:
+
+```js
+import tamiaTypeScriptReact from 'oxlint-config-raccoon/typescript-react';
+import jsxAccessibility from 'eslint-plugin-jsx-a11y';
+
+export default [
+  ...tamiaTypeScriptReact,
+  jsxAccessibility.flatConfigs.strict
+];
+```
+
+This config uses types for linting, so you need to have `tsconfig.json` that looks like this:
+
+```json
+{
+  "compilerOptions": {
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "strict": true
+  },
+  "include": ["src/*", "*.ts"]
+}
+```
 
 ## Code style at a glance
 
-- Two-space indentation.
-- Single quotes, semicolons, 80-char lines (enforced by Oxfmt).
-- Declare variables just before their first use.
-- One variable per `const`/`let` statement; no `var`.
-- Strict equality (`===`, `!==`).
+- ~~Tab indentation.~~
+- Single-quotes.
+- Semicolons.
+- Declare variables just before their first usage.
+- Multiple variable statements over multiple variable in a single statement.
+- Make `const`, not `var`.
+- Use `===` and `!==` over `==` and `!=`.
 - Return early.
+- Limit line lengths to 80 chars.
+- Prefer readability over religion.
+- Use ES6.
 
-```js
+Example:
+
+```javascript
 function eatFood(food) {
   if (food.length === 0) {
     return ['No food'];
@@ -106,3 +121,7 @@ function eatFood(food) {
 const food = ['Pizza', 'Burger', 'Coffee'];
 console.log(eatFood(food));
 ```
+
+---
+
+See [ESlint config docs](http://eslint.org/docs/user-guide/configuring#extending-configuration-files) for more information.

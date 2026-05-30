@@ -1,68 +1,67 @@
 {
-  "name": "oxlint-config-raccoon",
-  "version": "9.9.2",
-  "description": "Artem Sapegin’s Oxlint and Oxfmt config",
-  "keywords": [
-    "oxfmt",
-    "oxfmtconfig",
-    "oxlint",
-    "oxlintconfig"
-  ],
-  "homepage": "https://github.com/sapegin/oxlint-config-raccoon",
-  "bugs": {
-    "url": "https://github.com/sapegin/oxlint-config-raccoon/issues"
-  },
-  "license": "MIT",
-  "author": {
-    "name": "Artem Sapegin",
-    "url": "https://sapegin.me/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/sapegin/oxlint-config-raccoon"
-  },
-  "files": [
-    "*.json"
-  ],
-  "type": "module",
-  "exports": {
-    ".": "./base.json",
-    "./base": "./base.json",
-    "./typescript": "./typescript.json",
-    "./typescript-react": "./typescript-react.json",
-    "./typescript-react-tailwind": "./typescript-react-tailwind.json",
-    "./oxfmt": "./oxfmt.json"
-  },
-  "scripts": {
-    "pretest": "npm run lint",
-    "test": "vitest run",
-    "posttest": "npm run format",
-    "lint": "oxlint --type-aware --fix",
-    "format": "oxfmt -c oxfmt.json",
-    "test:watch": "vitest"
-  },
-  "devDependencies": {
-    "oxfmt": "^0.50.0",
-    "oxlint": "^1.65.0",
-    "oxlint-tailwindcss": "^0.8.0",
-    "oxlint-tsgolint": "^0.22.1",
-    "vitest": "^4.0.16"
-  },
-  "peerDependencies": {
-    "oxfmt": "*",
-    "oxlint": "*",
-    "oxlint-tailwindcss": "*",
-    "oxlint-tsgolint": "*"
-  },
-  "peerDependenciesMeta": {
-    "oxlint-tailwindcss": {
-      "optional": true
-    },
-    "oxlint-tsgolint": {
-      "optional": true
-    }
-  },
-  "engines": {
-    "node": ">=24"
-  }
+	"name": "oxlint-config-raccoon",
+	"description": "Artem Sapegin’s Oxlint config",
+	"version": "9.9.2",
+	"engines": {
+		"node": ">=24"
+	},
+	"type": "module",
+	"main": "index.mjs",
+	"exports": {
+		".": {
+			"import": "./index.mjs"
+		},
+		"./typescript": "./typescript.mjs",
+		"./typescript-react": "./typescript-react.mjs"
+	},
+	"files": [
+		"rules",
+		"*.mjs"
+	],
+	"scripts": {
+		"pretest": "npm run lint",
+		"test": "npm run test:vitest",
+		"lint": "eslint . --cache --fix",
+		"test:vitest": "vitest run",
+		"test:watch": "vitest"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/sapegin/oxlint-config-raccoon"
+	},
+	"keywords": [
+		"oxlint",
+		"oxlintconfig"
+	],
+	"author": {
+		"name": "Artem Sapegin",
+		"url": "https://sapegin.me/"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/sapegin/oxlint-config-raccoon/issues"
+	},
+	"homepage": "https://github.com/sapegin/oxlint-config-raccoon",
+	"devDependencies": {
+		"@types/eslint__js": "^8.42.3",
+		"@types/react": "^19.2.7",
+		"eslint": ">=9.39",
+		"react": "^19.2.3",
+		"vitest": "^4.0.16"
+	},
+	"peerDependencies": {
+		"eslint": ">=9.39"
+	},
+	"dependencies": {
+		"@eslint-community/eslint-plugin-eslint-comments": "4.5.0",
+		"@eslint-react/eslint-plugin": "2.3.13",
+		"@eslint/js": "9.39.2",
+		"@vitest/eslint-plugin": "1.5.2",
+		"eslint-plugin-de-morgan": "2.0.0",
+		"eslint-plugin-simple-import-sort": "12.1.1",
+		"eslint-plugin-unicorn": "62.0.0",
+		"eslint-plugin-washing-code": "1.1.0",
+		"globals": "16.5.0",
+		"typescript-eslint": "8.50.0"
+	}
 }
