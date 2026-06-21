@@ -1,5 +1,7 @@
 # eslint-config-tamia
 
+[Superseded with oxlint-config-raccoon](https://github.com/sapegin/oxlint-config-raccoon)
+
 [![npm](https://img.shields.io/npm/v/eslint-config-tamia.svg)](https://www.npmjs.com/package/eslint-config-tamia) [![Node.js CI status](https://github.com/sapegin/eslint-config-tamia/workflows/Node.js%20CI/badge.svg)](https://github.com/sapegin/eslint-config-tamia/actions)
 
 This package provides a shared ESLint config that I use on all my projects.
